@@ -171,5 +171,32 @@ table.table.table-center-all tbody tr td {
     font-weight: bold !important;
 }
 
+/* Sortable table styles */
+.sortable {
+    cursor: pointer;
+    position: relative;
+}
+
+.sortable:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.sortable::after {
+    content: '↕';
+    position: absolute;
+    right: 8px;
+    color: #999;
+}
+
+.sortable.asc::after {
+    content: '↑';
+    color: #333;
+}
+
+.sortable.desc::after {
+    content: '↓';
+    color: #333;
+}
+
 
 
