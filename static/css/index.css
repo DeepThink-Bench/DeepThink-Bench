@@ -133,50 +133,11 @@ body {
   font-size: smaller;
 }
 
-/* Leaderboard Styles */
-.leaderboard-module {
-  width: 100%;
-  margin: 2em 0;
-}
-
-.module-container {
-  background: #fff;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.module-container:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.module-container:not(:first-child) {
-  margin-top: 3em;
-}
-
-.module-container h3 {
-  color: #363636;
-  border-bottom: 2px solid #f5f5f5;
-  padding-bottom: 0.5em;
-}
-
-.table-container {
-  overflow-x: auto;
-  margin-top: 1em;
-}
-
-.table-container table {
-  min-width: 100%;
-}
-
-.table-container th {
-  background-color: #f8f9fa;
-  white-space: nowrap;
-}
-
-.table-container td {
-  vertical-align: middle;
+/* Table cell alignment */
+.table-center-all th,
+.table-center-all td {
+    text-align: center !important;
+    vertical-align: middle !important;
 }
 
 
