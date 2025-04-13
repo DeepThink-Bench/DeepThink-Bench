@@ -18,6 +18,8 @@ $(document).ready(function() {
 	
     bulmaSlider.attach();
 
+    // 初始化表格排序
+    initTableSort();
 })
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,36 +28,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initTableSort() {
+    console.log('Initializing table sort...');
     const table = document.querySelector('.table-center-all');
-    const headers = table.querySelectorAll('th.sortable');
-    
-    headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const column = header.dataset.column;
-            const isAsc = !header.classList.contains('asc');
+    if (!table) {
+        console.error('Table not found');
+        return;
+    }
+
+    const headers = table.querySelectorAll('thead tr:last-child th');
+    headers.forEach((header, index) => {
+        if (index > 1) { // 跳过 LRM 和 LLM 列
+            header.classList.add('sortable');
+            header.style.cursor = 'pointer';
             
-            // 移除所有排序标记
-            headers.forEach(h => {
-                h.classList.remove('asc', 'desc');
+            header.addEventListener('click', () => {
+                console.log('Header clicked:', header.textContent);
+                const isAsc = !header.classList.contains('asc');
+                
+                // 移除所有排序标记
+                headers.forEach(h => {
+                    h.classList.remove('asc', 'desc');
+                });
+                
+                // 添加新的排序标记
+                header.classList.add(isAsc ? 'asc' : 'desc');
+                
+                // 执行排序
+                sortTableByColumn(table, index, isAsc);
             });
-            
-            // 添加新的排序标记
-            header.classList.add(isAsc ? 'asc' : 'desc');
-            
-            // 执行排序
-            sortTableByColumn(table, column, isAsc);
-        });
+        }
     });
 }
 
-function sortTableByColumn(table, column, asc = true) {
+function sortTableByColumn(table, columnIndex, asc = true) {
+    console.log('Sorting column:', columnIndex, 'ascending:', asc);
     const tbody = table.querySelector('tbody');
     const rows = Array.from(tbody.querySelectorAll('tr'));
     
     // 排序行
     const sortedRows = rows.sort((a, b) => {
-        const aValue = parseFloat(a.children[column].textContent) || 0;
-        const bValue = parseFloat(b.children[column].textContent) || 0;
+        const aCol = a.querySelectorAll('td')[columnIndex];
+        const bCol = b.querySelectorAll('td')[columnIndex];
+        
+        if (!aCol || !bCol) return 0;
+        
+        const aValue = parseFloat(aCol.textContent) || 0;
+        const bValue = parseFloat(bCol.textContent) || 0;
+        
         return asc ? aValue - bValue : bValue - aValue;
     });
     
@@ -65,13 +84,5 @@ function sortTableByColumn(table, column, asc = true) {
     }
     
     // 添加排序后的行
-    tbody.append(...sortedRows);
-    
-    // 更新行号
-    sortedRows.forEach((row, index) => {
-        const numberCell = row.querySelector('td:first-child');
-        if (numberCell) {
-            numberCell.textContent = index + 1;
-        }
-    });
+    sortedRows.forEach(row => tbody.appendChild(row));
 }

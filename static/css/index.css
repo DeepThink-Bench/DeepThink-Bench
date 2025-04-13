@@ -175,6 +175,7 @@ table.table.table-center-all tbody tr td {
 .sortable {
     cursor: pointer;
     position: relative;
+    padding-right: 25px !important;
 }
 
 .sortable:hover {
@@ -182,20 +183,23 @@ table.table.table-center-all tbody tr td {
 }
 
 .sortable::after {
-    content: '↕';
+    content: '⇅';
     position: absolute;
     right: 8px;
-    color: #999;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
 }
 
 .sortable.asc::after {
-    content: '↑';
-    color: #333;
+    content: '⇑';
+    color: #000;
 }
 
 .sortable.desc::after {
-    content: '↓';
-    color: #333;
+    content: '⇓';
+    color: #000;
 }
 
 
