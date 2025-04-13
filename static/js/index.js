@@ -32,8 +32,11 @@ function initTableSort() {
         header.addEventListener('click', function () {
             // 获取当前列的索引
             const headerRow = header.parentElement;
+			console.log('headerRow:',headerRow);
             const allHeaders = Array.from(headerRow.children);
+			console.log('allHeaders:',allHeaders);
             const columnIndex = allHeaders.indexOf(header);
+			console.log('columnIndex:',columnIndex);	
             const isAsc = !header.classList.contains('asc');
 
             // 清除其他列的排序样式
@@ -46,8 +49,8 @@ function initTableSort() {
 
             // 选择需要排序的列：从第4列开始（数据列）
             rows.sort((a, b) => {
-                const aValue = parseFloat(a.children[columnIndex + 3].textContent.trim()) || 0;  // 确保数据是数字
-                const bValue = parseFloat(b.children[columnIndex + 3].textContent.trim()) || 0;
+                const aValue = parseFloat(a.children[columnIndex + 1].textContent.trim()) || 0;  // 确保数据是数字
+                const bValue = parseFloat(b.children[columnIndex + 1].textContent.trim()) || 0;
                 return isAsc ? aValue - bValue : bValue - aValue;  // 按升序或降序排序
             });
 
