@@ -24,22 +24,21 @@ function initTableSort() {
         return;
     }
 
-    const datasetHeaders = table.querySelectorAll('.dataset-column');
-    console.log('Found dataset headers:', datasetHeaders.length);
+    const headers = table.querySelectorAll('thead th');
+    const tbody = table.querySelector('tbody');
 
-    datasetHeaders.forEach((header) => {
+    headers.forEach((header, columnIndex) => {
+        if (!header.classList.contains('dataset-column')) return;
+
         header.addEventListener('click', function () {
-            const columnIndex = Array.from(header.parentElement.children).indexOf(header);
-            console.log('Sorting column:', columnIndex, header.textContent);
-
             const isAsc = !header.classList.contains('asc');
-            datasetHeaders.forEach(h => h.classList.remove('asc', 'desc'));
+
+            // 切换排序图标
+            headers.forEach(h => h.classList.remove('asc', 'desc'));
             header.classList.add(isAsc ? 'asc' : 'desc');
 
-            const tbody = table.querySelector('tbody');
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
-            // 排序整个列的值
             rows.sort((a, b) => {
                 const aText = a.children[columnIndex]?.textContent.trim();
                 const bText = b.children[columnIndex]?.textContent.trim();
@@ -56,8 +55,7 @@ function initTableSort() {
                 }
             });
 
-            // 重新写入排序后的行
-            tbody.innerHTML = '';
+            // 重新填充排序后的内容
             rows.forEach(row => tbody.appendChild(row));
         });
     });
