@@ -26,28 +26,40 @@ function initTableSort() {
 
     const headers = table.querySelectorAll('thead th');
     const tbody = table.querySelector('tbody');
+    let sortState = {}; // 保存排序状态
 
     headers.forEach((header, columnIndex) => {
         if (!header.classList.contains('dataset-column')) return;
 
         header.addEventListener('click', function () {
-            const isAsc = !header.classList.contains('asc');
+            const isAsc = sortState[columnIndex] !== true;
+            sortState = {};
+            sortState[columnIndex] = isAsc;
 
-            // 清除旧的排序类
             headers.forEach(h => h.classList.remove('asc', 'desc'));
             header.classList.add(isAsc ? 'asc' : 'desc');
 
-            // 获取所有行
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
-            // 按该列数值进行排序
+            // 调试：输出排序前的列值
+            console.log(`🔍 点击列索引 ${columnIndex}（${header.textContent.trim()}）`);
+            console.log("排序前：", rows.map(row => row.children[columnIndex]?.textContent.trim()));
+
             rows.sort((a, b) => {
-                const aVal = parseFloat(a.children[columnIndex].textContent.trim()) || 0;
-                const bVal = parseFloat(b.children[columnIndex].textContent.trim()) || 0;
+                const aText = a.children[columnIndex]?.textContent.trim();
+                const bText = b.children[columnIndex]?.textContent.trim();
+                const aVal = parseFloat(aText);
+                const bVal = parseFloat(bText);
+
+                // NaN 安全处理
+                if (isNaN(aVal) || isNaN(bVal)) return 0;
+
                 return isAsc ? aVal - bVal : bVal - aVal;
             });
 
-            // 清空表格重新插入排序后的行
+            // 调试：输出排序后的列值
+            console.log("排序后：", rows.map(row => row.children[columnIndex]?.textContent.trim()));
+
             tbody.innerHTML = '';
             rows.forEach(row => tbody.appendChild(row));
         });
