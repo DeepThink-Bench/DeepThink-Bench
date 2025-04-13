@@ -24,42 +24,35 @@ function initTableSort() {
         return;
     }
 
-    const headers = table.querySelectorAll('thead th');
-    const tbody = table.querySelector('tbody');
-    let sortState = {}; // 保存排序状态
+    const datasetHeaders = table.querySelectorAll('.dataset-column.sortable');
+    console.log('Found dataset headers:', datasetHeaders.length);
 
-    headers.forEach((header, columnIndex) => {
-        if (!header.classList.contains('dataset-column')) return;
-
+    datasetHeaders.forEach((header) => {
         header.addEventListener('click', function () {
-            const isAsc = sortState[columnIndex] !== true;
-            sortState = {};
-            sortState[columnIndex] = isAsc;
+            const headerRow = header.parentElement;
+            const allHeaders = Array.from(headerRow.children);
+            const columnIndex = allHeaders.indexOf(header);
+            const isAsc = !header.classList.contains('asc');
 
-            headers.forEach(h => h.classList.remove('asc', 'desc'));
+            console.log('Clicked header text:', header.textContent);
+            console.log('Header column index in second row:', columnIndex);
+
+            // Remove asc/desc classes from all headers
+            datasetHeaders.forEach(h => h.classList.remove('asc', 'desc'));
             header.classList.add(isAsc ? 'asc' : 'desc');
 
+            const tbody = table.querySelector('tbody');
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
-            // 调试：输出排序前的列值
-            console.log(`🔍 点击列索引 ${columnIndex}（${header.textContent.trim()}）`);
-            console.log("排序前：", rows.map(row => row.children[columnIndex]?.textContent.trim()));
-
             rows.sort((a, b) => {
-                const aText = a.children[columnIndex]?.textContent.trim();
-                const bText = b.children[columnIndex]?.textContent.trim();
-                const aVal = parseFloat(aText);
-                const bVal = parseFloat(bText);
-
-                // NaN 安全处理
-                if (isNaN(aVal) || isNaN(bVal)) return 0;
-
-                return isAsc ? aVal - bVal : bVal - aVal;
+                const aValue = parseFloat(a.children[columnIndex + 3]?.textContent.trim()) || 0;
+                const bValue = parseFloat(b.children[columnIndex + 3]?.textContent.trim()) || 0;
+                const result = isAsc ? aValue - bValue : bValue - aValue;
+                console.log(`Compare: ${aValue} vs ${bValue} => ${result}`);
+                return result;
             });
 
-            // 调试：输出排序后的列值
-            console.log("排序后：", rows.map(row => row.children[columnIndex]?.textContent.trim()));
-
+            // 清空并重新插入排序后的行
             tbody.innerHTML = '';
             rows.forEach(row => tbody.appendChild(row));
         });
