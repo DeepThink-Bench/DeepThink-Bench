@@ -173,33 +173,27 @@ table.table.table-center-all tbody tr td {
 
 /* Sortable table styles */
 .sortable {
-    cursor: pointer;
-    position: relative;
-    padding-right: 25px !important;
+    cursor: pointer !important;
+    position: relative !important;
 }
 
 .sortable:hover {
-    background-color: #f0f0f0 !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .sortable::after {
-    content: '⇅';
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
-    font-size: 14px;
+    content: '↕';
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
 }
 
 .sortable.asc::after {
-    content: '⇑';
-    color: #000;
+    content: '↑';
 }
 
 .sortable.desc::after {
-    content: '⇓';
-    color: #000;
+    content: '↓';
 }
 
 
