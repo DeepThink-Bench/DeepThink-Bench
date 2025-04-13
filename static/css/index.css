@@ -150,14 +150,19 @@ table.table.table-center-all tbody tr td {
     vertical-align: middle !important;
 }
 
-/* Table header background colors */
-.table-container table.table.table-center-all > thead > tr > th[rowspan="2"]:first-child,  /* # */
-.table-container table.table.table-center-all > thead > tr > th[colspan="2"],  /* Model */
-.table-container table.table.table-center-all > thead > tr > th[colspan="9"],  /* Dataset */
-.table-container table.table.table-center-all > thead > tr > th[rowspan="2"]:last-child,    /* Avg */
+/* Table header styles */
+.table-container table.table.table-center-all > thead > tr:first-child > th {
+    background-color: #dddddd !important;
+}
+
 .table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(1),  /* LRM */
 .table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(2)   /* LLM */ {
     background-color: #dddddd !important;
+}
+
+/* Dataset column headers */
+.table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(n+3) {
+    background-color: #fafafa !important;
 }
 
 /* Avg column bold style */
