@@ -151,9 +151,10 @@ table.table.table-center-all tbody tr td {
 }
 
 /* Table header background colors */
+.table-container table.table.table-center-all > thead > tr > th[rowspan="2"]:first-child,  /* # */
 .table-container table.table.table-center-all > thead > tr > th[colspan="2"],  /* Model */
 .table-container table.table.table-center-all > thead > tr > th[colspan="9"],  /* Dataset */
-.table-container table.table.table-center-all > thead > tr > th:last-child,    /* Avg */
+.table-container table.table.table-center-all > thead > tr > th[rowspan="2"]:last-child,    /* Avg */
 .table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(1),  /* LRM */
 .table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(2)   /* LLM */ {
     background-color: #dddddd !important;

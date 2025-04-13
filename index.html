@@ -43,6 +43,12 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .table.is-striped tbody tr:nth-child(even) {
+      background-color: #fafafa !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -192,7 +198,7 @@
       <div class="leaderboard-module">
         <div class="module-container">
           <div class="table-container">
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth table-center-all">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth table-center-all" style="--stripe-color: #fafafa;">
               <thead>
                 <tr>
                   <th rowspan="2">#</th>
