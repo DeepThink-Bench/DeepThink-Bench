@@ -33,29 +33,26 @@ function initTableSort() {
         header.addEventListener('click', function () {
             const isAsc = !header.classList.contains('asc');
 
-            // 切换排序图标
+            // 切换排序状态
             headers.forEach(h => h.classList.remove('asc', 'desc'));
             header.classList.add(isAsc ? 'asc' : 'desc');
 
+            // 获取所有行
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
+            // 排序这些行，只按点击列中的数值比较
             rows.sort((a, b) => {
-                const aText = a.children[columnIndex]?.textContent.trim();
-                const bText = b.children[columnIndex]?.textContent.trim();
+                const aText = a.children[columnIndex]?.textContent.trim() || "0";
+                const bText = b.children[columnIndex]?.textContent.trim() || "0";
 
                 const aNum = parseFloat(aText);
                 const bNum = parseFloat(bText);
 
-                const isNumber = !isNaN(aNum) && !isNaN(bNum);
-
-                if (isNumber) {
-                    return isAsc ? aNum - bNum : bNum - aNum;
-                } else {
-                    return isAsc ? aText.localeCompare(bText) : bText.localeCompare(aText);
-                }
+                // 永远按数值排，NaN 的处理也当作 0
+                return isAsc ? aNum - bNum : bNum - aNum;
             });
 
-            // 重新填充排序后的内容
+            // 清空并重新插入排序后的行
             rows.forEach(row => tbody.appendChild(row));
         });
     });
