@@ -151,12 +151,18 @@ table.table.table-center-all tbody tr td {
 }
 
 /* Table header background colors */
-table.table.table-center-all thead th[colspan="2"],  /* Model */
-table.table.table-center-all thead th[colspan="9"],  /* Dataset */
-table.table.table-center-all thead th:last-child,    /* Avg */
-table.table.table-center-all thead tr:last-child th:nth-child(1),  /* LRM */
-table.table.table-center-all thead tr:last-child th:nth-child(2)   /* LLM */ {
+.table-container table.table.table-center-all > thead > tr > th[colspan="2"],  /* Model */
+.table-container table.table.table-center-all > thead > tr > th[colspan="9"],  /* Dataset */
+.table-container table.table.table-center-all > thead > tr > th:last-child,    /* Avg */
+.table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(1),  /* LRM */
+.table-container table.table.table-center-all > thead > tr:last-child > th:nth-child(2)   /* LLM */ {
     background-color: #dddddd !important;
+}
+
+/* Avg column bold style */
+.table-container table.table.table-center-all > thead > tr > th:last-child,
+.table-container table.table.table-center-all > tbody > tr > td:last-child {
+    font-weight: bold !important;
 }
 
 
