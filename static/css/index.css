@@ -133,9 +133,19 @@ body {
   font-size: smaller;
 }
 
-/* Table cell alignment */
-.table-center-all th,
-.table-center-all td {
+/* Table styles */
+table.table.table-center-all {
+    width: 100%;
+}
+
+table.table.table-center-all th,
+table.table.table-center-all td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 0.5em !important;
+}
+
+table.table.table-center-all tbody tr td {
     text-align: center !important;
     vertical-align: middle !important;
 }
