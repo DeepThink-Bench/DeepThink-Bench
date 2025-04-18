@@ -1,61 +1,82 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // // 初始化轮播图
-    // var options = {
-    //     slidesToScroll: 1,
-    //     slidesToShow: 1,
-    //     loop: true,
-    //     infinite: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 5000,
-    // }
-    // var carousels = bulmaCarousel.attach('.carousel', options);
-    // bulmaSlider.attach();
+    // 初始化轮播图
+    var options = {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+    }
+    var carousels = bulmaCarousel.attach('.carousel', options);
+    bulmaSlider.attach();
 
     // 初始化表格排序
     initTableSort();
 });
 
 function initTableSort() {
-    const table = document.querySelector('.table-center-all');  // 找到表格
+    const table = document.querySelector('.table-center-all');
     if (!table) {
         console.error('Table not found');
         return;
     }
 
-    // 获取所有可排序的列头
-    const datasetHeaders = table.querySelectorAll('.dataset-column.sortable');
+    // 选择所有数据集列的表头
+    const datasetHeaders = table.querySelectorAll('.dataset-column');
     console.log('Found dataset headers:', datasetHeaders.length);
 
-    datasetHeaders.forEach((header) => {
-        header.addEventListener('click', function () {
-            // 获取当前列的索引
-            const headerRow = header.parentElement;
-			console.log('headerRow:',headerRow);
-            const allHeaders = Array.from(headerRow.children);
-			console.log('allHeaders:',allHeaders);
-            const columnIndex = allHeaders.indexOf(header);
-			console.log('columnIndex:',columnIndex);	
-            const isAsc = !header.classList.contains('asc');
+    // 添加表头样式表明可排序
+    datasetHeaders.forEach(header => {
+        header.style.cursor = 'pointer';
+        header.title = '点击排序';
+    });
 
-            // 清除其他列的排序样式
+    datasetHeaders.forEach((header) => {
+        header.addEventListener('click', function() {
+            const columnIndex = Array.from(header.parentElement.children).indexOf(header);
+            console.log('Sorting column:', columnIndex, header.textContent);
+            
+            const isAsc = !header.classList.contains('asc');
             datasetHeaders.forEach(h => h.classList.remove('asc', 'desc'));
             header.classList.add(isAsc ? 'asc' : 'desc');
-
-            // 获取tbody中的所有行
-            const rows = Array.from(table.querySelectorAll('tbody tr'));
-            console.log('Total rows before sort:', rows.length);
-
-            // 选择需要排序的列：从第4列开始（数据列）
+            
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // 对整个表格进行排序
             rows.sort((a, b) => {
-                const aValue = parseFloat(a.children[columnIndex + 1].textContent.trim()) || 0;  // 确保数据是数字
-                const bValue = parseFloat(b.children[columnIndex + 1].textContent.trim()) || 0;
-                return isAsc ? aValue - bValue : bValue - aValue;  // 按升序或降序排序
+                const aCells = a.querySelectorAll('td');
+                const bCells = b.querySelectorAll('td');
+                
+                // 获取数据并确保是数值类型
+                const aValue = parseFloat(aCells[columnIndex]?.textContent.trim()) || 0;
+                const bValue = parseFloat(bCells[columnIndex]?.textContent.trim()) || 0;
+                
+                return isAsc ? bValue - aValue : aValue - bValue;
             });
-
-            // 将排序后的行重新放入tbody
-            rows.forEach(row => table.querySelector('tbody').appendChild(row));
+            
+            // 重新组织表格
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // 更新行序号
+            updateRowNumbers();
         });
+    });
+}
+
+function updateRowNumbers() {
+    const table = document.querySelector('.table-center-all');
+    if (!table) return;
+    
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+    rows.forEach((row, index) => {
+        const firstCell = row.querySelector('td:first-child');
+        if (firstCell) {
+            firstCell.textContent = index + 1;
+        }
     });
 }
