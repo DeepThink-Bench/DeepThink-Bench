@@ -1,1838 +1,1952 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Benchmarking Deep Thinking and Reasoning of Large Language Models</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+    <title>Benchmarking Deep Thinking and Reasoning of Large Language Models</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
 
-  <style>
-    .table.is-striped tbody tr:nth-child(even) {
-      background-color: #fafafa !important;
-    }
-  </style>
+    <style>
+        .table.is-striped tbody tr:nth-child(even) {
+            background-color: #fafafa !important;
+        }
+    </style>
 </head>
+
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Benchmarking Deep Thinking and Reasoning of Large Language Models</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Benchmarking Deep Thinking and Reasoning of Large
+                            Language Models</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First
+                                    Author</a><sup>*</sup>,</span>
+                            <span class="author-block">
+                                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second
+                                    Author</a><sup>*</sup>,</span>
+                            <span class="author-block">
+                                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                            </span>
+                        </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Institution Name<br>Conferance name and year</span>
+                            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                        </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Arxiv PDF link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                                <!-- Supplementary PDF link -->
+                                <span class="link-block">
+                                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Supplementary</span>
+                                    </a>
+                                </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent advancements in large language models (LLMs) have led to the development of large reasoning models (LRMs), which incorporate intermediate deep thinking to guide decision-making. These LRMs have demonstrated promising results in a range of domains, including commonsense reasoning, mathematics, and code generation. However, the precise role of deep thinking in improving model performance remains underexplored, and no universally accepted framework exists to evaluate its impact. To address this gap, we introduce DeepThinkBench, a comprehensive benchmarking framework designed to evaluate the effects of deep thinking on instruction-based LLMs. Our experiments reveal three key findings: 1) incorporating deep thinking from LRMs significantly enhances the performance of instruction-based LLMs, particularly in tasks that require multi-step reasoning; 2) deep thinking improves both accuracy and efficiency, though the extent of improvement varies depending on the task; and 3) we propose three distinct rankings (i.e., ranking single LLMs, ranking single LRMs, and ranking combined LLMs) providing a holistic view of deep thinking. These contributions highlight the potential of integrating deep thinking to advance instruction-based LLM capabilities, and we advocate for further research on optimizing deep thinking integration to enhance model scalability, robustness, and real-world applicability across diverse tasks.
-          </p>
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Recent advancements in large language models (LLMs) have led to the development of large
+                            reasoning models (LRMs), which incorporate intermediate deep thinking to guide
+                            decision-making. These LRMs have demonstrated promising results in a range of domains,
+                            including commonsense reasoning, mathematics, and code generation. However, the precise role
+                            of deep thinking in improving model performance remains underexplored, and no universally
+                            accepted framework exists to evaluate its impact. To address this gap, we introduce
+                            DeepThinkBench, a comprehensive benchmarking framework designed to evaluate the effects of
+                            deep thinking on instruction-based LLMs. Our experiments reveal three key findings: 1)
+                            incorporating deep thinking from LRMs significantly enhances the performance of
+                            instruction-based LLMs, particularly in tasks that require multi-step reasoning; 2) deep
+                            thinking improves both accuracy and efficiency, though the extent of improvement varies
+                            depending on the task; and 3) we propose three distinct rankings (i.e., ranking single LLMs,
+                            ranking single LRMs, and ranking combined LLMs) providing a holistic view of deep thinking.
+                            These contributions highlight the potential of integrating deep thinking to advance
+                            instruction-based LLM capabilities, and we advocate for further research on optimizing deep
+                            thinking integration to enhance model scalability, robustness, and real-world applicability
+                            across diverse tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/poster.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Overview of the DeepThink Bench framework. 1) Thought Extraction, focusing on the generation of deep thinking; 2) Prompt Construction, mainly for integrating deep thinking; 3) Evaluation on multiple tasks.
-        </h2>
-      </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-<!-- Leaderboard section -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Leaderboard</h2>
-      
-      <!-- Leaderboard Module -->
-      <div class="leaderboard-module">
-        <div class="module-container">
-          <div class="table-container">
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth table-center-all" style="--stripe-color: #fafafa;">
-              <thead>
-                <tr>
-                  <th rowspan="2">#</th>
-                  <th colspan="2">Model</th>
-                  <th colspan="9">Dataset</th>
-                  <th>   </th>
-                </tr>
-                <tr>
-                  <th>LRM</th>
-                  <th>LLM</th>
-                  <th class="dataset-column sortable">OpenBookQA</th>
-                  <th class="dataset-column sortable">HellaSwag</th>
-                  <th class="dataset-column sortable">GSM8K</th>
-                  <th class="dataset-column sortable">MATH</th>
-                  <th class="dataset-column sortable">HumanEval</th>
-                  <th class="dataset-column sortable">SST-2</th>
-                  <th class="dataset-column sortable">IMDB</th>
-                  <th class="dataset-column sortable">SQuAD</th>
-                  <th class="dataset-column sortable">DROP</th>
-                  <th class="dataset-column sortable" style="background-color: #dddddd !important;">Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- R1 Data -->
-                <tr>
-                  <td>1</td>
-                  <td>Deepseek-R1</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>87.19</td>
-                  <td>57.66</td>
-                  <td>91.85</td>
-                  <td>62.17</td>
-                  <td>27.50</td>
-                  <td>89.89</td>
-                  <td>93.20</td>
-                  <td>88.39</td>
-                  <td>90.17</td>
-                  <td>76.45</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Deepseek-R1</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>89.37</td>
-                  <td>59.84</td>
-                  <td>93.15</td>
-                  <td>62.56</td>
-                  <td>83.01</td>
-                  <td>89.99</td>
-                  <td>94.42</td>
-                  <td>91.73</td>
-                  <td>94.28</td>
-                  <td>84.26</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Deepseek-R1</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>88.50</td>
-                  <td>62.31</td>
-                  <td>96.76</td>
-                  <td>80.44</td>
-                  <td>85.89</td>
-                  <td>91.22</td>
-                  <td>94.55</td>
-                  <td>90.67</td>
-                  <td>88.93</td>
-                  <td>86.59</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Deepseek-R1</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>88.12</td>
-                  <td>60.45</td>
-                  <td>96.78</td>
-                  <td>56.90</td>
-                  <td>82.34</td>
-                  <td>89.56</td>
-                  <td>95.78</td>
-                  <td>89.01</td>
-                  <td>91.23</td>
-                  <td>83.35</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Deepseek-R1</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>89.45</td>
-                  <td>59.67</td>
-                  <td>89.89</td>
-                  <td>60.12</td>
-                  <td>80.34</td>
-                  <td>88.56</td>
-                  <td>93.78</td>
-                  <td>91.90</td>
-                  <td>90.12</td>
-                  <td>82.65</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Deepseek-R1</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>88.34</td>
-                  <td>60.56</td>
-                  <td>97.78</td>
-                  <td>78.90</td>
-                  <td>90.12</td>
-                  <td>90.34</td>
-                  <td>94.56</td>
-                  <td>93.78</td>
-                  <td>91.90</td>
-                  <td>87.36</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Deepseek-R1</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>87.12</td>
-                  <td>61.34</td>
-                  <td>97.56</td>
-                  <td>83.78</td>
-                  <td>93.90</td>
-                  <td>90.12</td>
-                  <td>94.34</td>
-                  <td>91.56</td>
-                  <td>91.78</td>
-                  <td>87.94</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Deepseek-R1</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>82.90</td>
-                  <td>62.12</td>
-                  <td>91.34</td>
-                  <td>76.56</td>
-                  <td>70.78</td>
-                  <td>90.90</td>
-                  <td>94.12</td>
-                  <td>93.34</td>
-                  <td>93.56</td>
-                  <td>83.96</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Deepseek-R1</td>
-                  <td>GPT3.5</td>
-                  <td>89.78</td>
-                  <td>59.90</td>
-                  <td>92.12</td>
-                  <td>66.34</td>
-                  <td>59.56</td>
-                  <td>91.78</td>
-                  <td>95.90</td>
-                  <td>93.12</td>
-                  <td>90.34</td>
-                  <td>82.09</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Deepseek-R1</td>
-                  <td>GPT4o</td>
-                  <td>82.56</td>
-                  <td>62.78</td>
-                  <td>97.90</td>
-                  <td>61.12</td>
-                  <td>73.34</td>
-                  <td>90.56</td>
-                  <td>94.78</td>
-                  <td>91.90</td>
-                  <td>93.12</td>
-                  <td>83.12</td>
-                </tr>
-                <tr>
-                  <td>11</td>
-                  <td>Deepseek-R1</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>78.84</td>
-                  <td>53.12</td>
-                  <td>83.97</td>
-                  <td>52.45</td>
-                  <td>79.31</td>
-                  <td>81.66</td>
-                  <td>84.08</td>
-                  <td>85.23</td>
-                  <td>80.77</td>
-                  <td>75.49</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>Deepseek-R1</td>
-                  <td>Gemma 7B</td>
-                  <td>62.39</td>
-                  <td>31.85</td>
-                  <td>53.72</td>
-                  <td>30.14</td>
-                  <td>69.93</td>
-                  <td>67.28</td>
-                  <td>69.55</td>
-                  <td>70.49</td>
-                  <td>74.61</td>
-                  <td>58.88</td>
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td>Deepseek-R1</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>61.27</td>
-                  <td>32.90</td>
-                  <td>54.03</td>
-                  <td>32.68</td>
-                  <td>70.19</td>
-                  <td>66.44</td>
-                  <td>67.82</td>
-                  <td>72.37</td>
-                  <td>70.15</td>
-                  <td>58.65</td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>Deepseek-R1</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>70.56</td>
-                  <td>54.41</td>
-                  <td>69.88</td>
-                  <td>40.27</td>
-                  <td>73.95</td>
-                  <td>82.33</td>
-                  <td>84.76</td>
-                  <td>86.09</td>
-                  <td>90.42</td>
-                  <td>72.52</td>
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td>Deepseek-R1</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>81.63</td>
-                  <td>61.78</td>
-                  <td>87.25</td>
-                  <td>59.06</td>
-                  <td>76.84</td>
-                  <td>89.97</td>
-                  <td>91.52</td>
-                  <td>89.30</td>
-                  <td>88.71</td>
-                  <td>80.67</td>
-                </tr>
-
-                <!-- Deepseek-R1-zero Data -->
-                <tr>
-                  <td>16</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>89.45</td>
-                  <td>58.83</td>
-                  <td>93.12</td>
-                  <td>65.74</td>
-                  <td>26.37</td>
-                  <td>88.95</td>
-                  <td>94.08</td>
-                  <td>89.63</td>
-                  <td>81.52</td>
-                  <td>76.41</td>
-                </tr>
-                <tr>
-                  <td>17</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>89.17</td>
-                  <td>60.29</td>
-                  <td>94.86</td>
-                  <td>63.55</td>
-                  <td>81.33</td>
-                  <td>87.44</td>
-                  <td>89.77</td>
-                  <td>92.16</td>
-                  <td>83.09</td>
-                  <td>82.41</td>
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>93.68</td>
-                  <td>67.41</td>
-                  <td>96.03</td>
-                  <td>78.92</td>
-                  <td>84.57</td>
-                  <td>90.24</td>
-                  <td>94.91</td>
-                  <td>88.05</td>
-                  <td>87.38</td>
-                  <td>86.80</td>
-                </tr>
-                <tr>
-                  <td>19</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>92.73</td>
-                  <td>62.85</td>
-                  <td>97.56</td>
-                  <td>58.39</td>
-                  <td>83.64</td>
-                  <td>89.47</td>
-                  <td>93.82</td>
-                  <td>91.25</td>
-                  <td>87.93</td>
-                  <td>84.18</td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>90.06</td>
-                  <td>66.58</td>
-                  <td>98.14</td>
-                  <td>59.27</td>
-                  <td>79.81</td>
-                  <td>89.62</td>
-                  <td>94.36</td>
-                  <td>93.71</td>
-                  <td>87.48</td>
-                  <td>84.34</td>
-                </tr>
-                <tr>
-                  <td>21</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>91.83</td>
-                  <td>65.97</td>
-                  <td>97.28</td>
-                  <td>80.45</td>
-                  <td>88.19</td>
-                  <td>87.03</td>
-                  <td>94.55</td>
-                  <td>95.22</td>
-                  <td>83.76</td>
-                  <td>87.14</td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>91.24</td>
-                  <td>66.35</td>
-                  <td>98.67</td>
-                  <td>83.09</td>
-                  <td>94.72</td>
-                  <td>90.85</td>
-                  <td>93.41</td>
-                  <td>90.63</td>
-                  <td>84.94</td>
-                  <td>88.21</td>
-                </tr>
-                <tr>
-                  <td>23</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>94.50</td>
-                  <td>68.92</td>
-                  <td>86.37</td>
-                  <td>79.18</td>
-                  <td>72.53</td>
-                  <td>91.46</td>
-                  <td>96.15</td>
-                  <td>90.84</td>
-                  <td>85.29</td>
-                  <td>85.03</td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>GPT3.5</td>
-                  <td>91.77</td>
-                  <td>66.44</td>
-                  <td>96.85</td>
-                  <td>68.73</td>
-                  <td>60.29</td>
-                  <td>88.96</td>
-                  <td>93.59</td>
-                  <td>91.38</td>
-                  <td>86.67</td>
-                  <td>82.74</td>
-                </tr>
-                <tr>
-                  <td>25</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>GPT4o</td>
-                  <td>90.32</td>
-                  <td>69.15</td>
-                  <td>98.03</td>
-                  <td>65.88</td>
-                  <td>74.42</td>
-                  <td>90.57</td>
-                  <td>94.28</td>
-                  <td>92.16</td>
-                  <td>87.84</td>
-                  <td>84.74</td>
-                </tr>
-                <tr>
-                  <td>26</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>79.61</td>
-                  <td>52.34</td>
-                  <td>84.97</td>
-                  <td>50.81</td>
-                  <td>75.26</td>
-                  <td>84.73</td>
-                  <td>81.69</td>
-                  <td>83.95</td>
-                  <td>84.08</td>
-                  <td>75.27</td>
-                </tr>
-                <tr>
-                  <td>27</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Gemma 7B</td>
-                  <td>62.93</td>
-                  <td>31.78</td>
-                  <td>53.45</td>
-                  <td>30.62</td>
-                  <td>69.14</td>
-                  <td>68.37</td>
-                  <td>67.85</td>
-                  <td>74.29</td>
-                  <td>72.51</td>
-                  <td>58.99</td>
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>64.20</td>
-                  <td>30.56</td>
-                  <td>57.89</td>
-                  <td>34.17</td>
-                  <td>68.48</td>
-                  <td>70.92</td>
-                  <td>69.63</td>
-                  <td>70.74</td>
-                  <td>74.39</td>
-                  <td>60.11</td>
-                </tr>
-                <tr>
-                  <td>29</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>69.35</td>
-                  <td>58.07</td>
-                  <td>66.82</td>
-                  <td>42.59</td>
-                  <td>75.83</td>
-                  <td>80.46</td>
-                  <td>83.19</td>
-                  <td>84.03</td>
-                  <td>88.72</td>
-                  <td>72.12</td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>Deepseek-R1-zero</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>80.88</td>
-                  <td>61.24</td>
-                  <td>87.57</td>
-                  <td>57.95</td>
-                  <td>78.06</td>
-                  <td>84.89</td>
-                  <td>88.44</td>
-                  <td>85.97</td>
-                  <td>90.31</td>
-                  <td>79.48</td>
-                </tr>
-
-
-                <!-- QwQ-32B Data -->
-                <tr>
-                  <td>31</td>
-                  <td>QwQ-32B</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>87.23</td>
-                  <td>57.84</td>
-                  <td>95.16</td>
-                  <td>63.47</td>
-                  <td>48.95</td>
-                  <td>90.03</td>
-                  <td>88.76</td>
-                  <td>87.59</td>
-                  <td>85.12</td>
-                  <td>78.24</td>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>QwQ-32B</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>88.45</td>
-                  <td>64.91</td>
-                  <td>92.37</td>
-                  <td>65.28</td>
-                  <td>77.64</td>
-                  <td>89.82</td>
-                  <td>89.15</td>
-                  <td>88.03</td>
-                  <td>92.74</td>
-                  <td>83.15</td>
-                </tr>
-                <tr>
-                  <td>33</td>
-                  <td>QwQ-32B</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>90.68</td>
-                  <td>63.52</td>
-                  <td>97.85</td>
-                  <td>83.19</td>
-                  <td>76.43</td>
-                  <td>91.27</td>
-                  <td>90.56</td>
-                  <td>89.89</td>
-                  <td>86.31</td>
-                  <td>85.52</td>
-                </tr>
-                <tr>
-                  <td>34</td>
-                  <td>QwQ-32B</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>88.94</td>
-                  <td>64.03</td>
-                  <td>96.72</td>
-                  <td>50.68</td>
-                  <td>81.45</td>
-                  <td>90.58</td>
-                  <td>91.39</td>
-                  <td>91.84</td>
-                  <td>87.07</td>
-                  <td>82.52</td>
-                </tr>
-                <tr>
-                  <td>35</td>
-                  <td>QwQ-32B</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>88.62</td>
-                  <td>62.47</td>
-                  <td>99.35</td>
-                  <td>72.81</td>
-                  <td>78.26</td>
-                  <td>90.49</td>
-                  <td>90.93</td>
-                  <td>84.75</td>
-                  <td>87.68</td>
-                  <td>83.93</td>
-                </tr>
-                <tr>
-                  <td>36</td>
-                  <td>QwQ-32B</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>88.15</td>
-                  <td>60.89</td>
-                  <td>97.04</td>
-                  <td>82.57</td>
-                  <td>88.32</td>
-                  <td>90.66</td>
-                  <td>90.28</td>
-                  <td>90.17</td>
-                  <td>90.84</td>
-                  <td>86.55</td>
-                </tr>
-                <tr>
-                  <td>37</td>
-                  <td>QwQ-32B</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>90.73</td>
-                  <td>67.42</td>
-                  <td>98.25</td>
-                  <td>85.96</td>
-                  <td>91.08</td>
-                  <td>90.79</td>
-                  <td>91.63</td>
-                  <td>92.35</td>
-                  <td>88.47</td>
-                  <td>88.52</td>
-                </tr>
-                <tr>
-                  <td>38</td>
-                  <td>QwQ-32B</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>91.86</td>
-                  <td>67.59</td>
-                  <td>97.13</td>
-                  <td>76.24</td>
-                  <td>66.83</td>
-                  <td>89.41</td>
-                  <td>91.05</td>
-                  <td>92.76</td>
-                  <td>93.48</td>
-                  <td>85.15</td>
-                </tr>
-                <tr>
-                  <td>39</td>
-                  <td>QwQ-32B</td>
-                  <td>GPT3.5</td>
-                  <td>89.27</td>
-                  <td>65.74</td>
-                  <td>97.82</td>
-                  <td>65.39</td>
-                  <td>50.62</td>
-                  <td>90.84</td>
-                  <td>88.97</td>
-                  <td>88.46</td>
-                  <td>86.51</td>
-                  <td>80.40</td>
-                </tr>
-                <tr>
-                  <td>40</td>
-                  <td>QwQ-32B</td>
-                  <td>GPT4o</td>
-                  <td>89.63</td>
-                  <td>62.18</td>
-                  <td>98.06</td>
-                  <td>62.75</td>
-                  <td>82.93</td>
-                  <td>92.15</td>
-                  <td>89.32</td>
-                  <td>90.81</td>
-                  <td>90.43</td>
-                  <td>84.25</td>
-                </tr>
-                <tr>
-                  <td>41</td>
-                  <td>QwQ-32B</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>70.35</td>
-                  <td>46.82</td>
-                  <td>80.57</td>
-                  <td>43.06</td>
-                  <td>70.19</td>
-                  <td>84.28</td>
-                  <td>78.64</td>
-                  <td>75.39</td>
-                  <td>78.91</td>
-                  <td>69.80</td>
-                </tr>
-                <tr>
-                  <td>42</td>
-                  <td>QwQ-32B</td>
-                  <td>Gemma 7B</td>
-                  <td>55.47</td>
-                  <td>30.93</td>
-                  <td>48.61</td>
-                  <td>27.84</td>
-                  <td>60.72</td>
-                  <td>60.35</td>
-                  <td>62.89</td>
-                  <td>69.52</td>
-                  <td>70.68</td>
-                  <td>54.11</td>
-                </tr>
-                <tr>
-                  <td>43</td>
-                  <td>QwQ-32B</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>62.14</td>
-                  <td>27.85</td>
-                  <td>50.32</td>
-                  <td>30.67</td>
-                  <td>60.48</td>
-                  <td>58.73</td>
-                  <td>68.42</td>
-                  <td>69.15</td>
-                  <td>72.86</td>
-                  <td>55.62</td>
-                </tr>
-                <tr>
-                  <td>44</td>
-                  <td>QwQ-32B</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>63.58</td>
-                  <td>55.09</td>
-                  <td>60.47</td>
-                  <td>40.82</td>
-                  <td>72.34</td>
-                  <td>75.91</td>
-                  <td>80.28</td>
-                  <td>80.63</td>
-                  <td>81.79</td>
-                  <td>67.88</td>
-                </tr>
-                <tr>
-                  <td>45</td>
-                  <td>QwQ-32B</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>77.26</td>
-                  <td>66.43</td>
-                  <td>84.95</td>
-                  <td>50.38</td>
-                  <td>71.62</td>
-                  <td>73.85</td>
-                  <td>73.09</td>
-                  <td>79.24</td>
-                  <td>83.57</td>
-                  <td>73.38</td>
-                </tr>
-
-                <!-- Gemini-2.0 Data -->
-                <tr>
-                  <td>46</td>
-                  <td>Gemini-2.0</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>88.34</td>
-                  <td>56.17</td>
-                  <td>95.89</td>
-                  <td>82.03</td>
-                  <td>31.76</td>
-                  <td>86.45</td>
-                  <td>88.92</td>
-                  <td>94.57</td>
-                  <td>87.28</td>
-                  <td>79.05</td>
-                </tr>
-                <tr>
-                  <td>47</td>
-                  <td>Gemini-2.0</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>90.61</td>
-                  <td>64.83</td>
-                  <td>95.12</td>
-                  <td>77.49</td>
-                  <td>83.95</td>
-                  <td>85.34</td>
-                  <td>89.07</td>
-                  <td>94.26</td>
-                  <td>91.73</td>
-                  <td>85.82</td>
-                </tr>
-                <tr>
-                  <td>48</td>
-                  <td>Gemini-2.0</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>90.25</td>
-                  <td>67.90</td>
-                  <td>95.47</td>
-                  <td>86.58</td>
-                  <td>80.63</td>
-                  <td>88.14</td>
-                  <td>90.82</td>
-                  <td>94.39</td>
-                  <td>86.04</td>
-                  <td>86.69</td>
-                </tr>
-                <tr>
-                  <td>49</td>
-                  <td>Gemini-2.0</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>91.78</td>
-                  <td>64.29</td>
-                  <td>94.63</td>
-                  <td>70.85</td>
-                  <td>82.41</td>
-                  <td>88.97</td>
-                  <td>89.51</td>
-                  <td>92.16</td>
-                  <td>92.88</td>
-                  <td>85.28</td>
-                </tr>
-                <tr>
-                  <td>50</td>
-                  <td>Gemini-2.0</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>90.42</td>
-                  <td>66.55</td>
-                  <td>95.21</td>
-                  <td>83.74</td>
-                  <td>69.38</td>
-                  <td>87.62</td>
-                  <td>90.19</td>
-                  <td>93.05</td>
-                  <td>85.93</td>
-                  <td>84.68</td>
-                </tr>
-                <tr>
-                  <td>51</td>
-                  <td>Gemini-2.0</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>91.06</td>
-                  <td>61.24</td>
-                  <td>94.75</td>
-                  <td>87.32</td>
-                  <td>78.09</td>
-                  <td>86.80</td>
-                  <td>90.67</td>
-                  <td>91.84</td>
-                  <td>91.37</td>
-                  <td>85.90</td>
-                </tr>
-                <tr>
-                  <td>52</td>
-                  <td>Gemini-2.0</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>91.49</td>
-                  <td>60.83</td>
-                  <td>96.17</td>
-                  <td>89.46</td>
-                  <td>89.27</td>
-                  <td>86.53</td>
-                  <td>87.95</td>
-                  <td>94.71</td>
-                  <td>89.02</td>
-                  <td>87.27</td>
-                </tr>
-                <tr>
-                  <td>53</td>
-                  <td>Gemini-2.0</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>90.93</td>
-                  <td>69.47</td>
-                  <td>94.38</td>
-                  <td>87.15</td>
-                  <td>75.84</td>
-                  <td>89.26</td>
-                  <td>90.44</td>
-                  <td>96.03</td>
-                  <td>93.65</td>
-                  <td>87.46</td>
-                </tr>
-                <tr>
-                  <td>54</td>
-                  <td>Gemini-2.0</td>
-                  <td>GPT3.5</td>
-                  <td>91.85</td>
-                  <td>63.72</td>
-                  <td>95.54</td>
-                  <td>86.97</td>
-                  <td>56.29</td>
-                  <td>87.18</td>
-                  <td>88.73</td>
-                  <td>93.82</td>
-                  <td>91.49</td>
-                  <td>83.95</td>
-                </tr>
-                <tr>
-                  <td>55</td>
-                  <td>Gemini-2.0</td>
-                  <td>GPT4o</td>
-                  <td>88.67</td>
-                  <td>61.08</td>
-                  <td>94.86</td>
-                  <td>72.53</td>
-                  <td>79.64</td>
-                  <td>87.40</td>
-                  <td>86.15</td>
-                  <td>95.28</td>
-                  <td>94.07</td>
-                  <td>84.41</td>
-                </tr>
-                <tr>
-                  <td>56</td>
-                  <td>Gemini-2.0</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>72.56</td>
-                  <td>50.39</td>
-                  <td>83.74</td>
-                  <td>44.82</td>
-                  <td>75.91</td>
-                  <td>88.23</td>
-                  <td>77.68</td>
-                  <td>76.45</td>
-                  <td>78.90</td>
-                  <td>72.08</td>
-                </tr>
-                <tr>
-                  <td>57</td>
-                  <td>Gemini-2.0</td>
-                  <td>Gemma 7B</td>
-                  <td>53.47</td>
-                  <td>44.12</td>
-                  <td>44.95</td>
-                  <td>31.60</td>
-                  <td>63.87</td>
-                  <td>66.04</td>
-                  <td>62.31</td>
-                  <td>72.89</td>
-                  <td>72.15</td>
-                  <td>56.82</td>
-                </tr>
-                <tr>
-                  <td>58</td>
-                  <td>Gemini-2.0</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>63.83</td>
-                  <td>34.75</td>
-                  <td>55.28</td>
-                  <td>35.43</td>
-                  <td>66.59</td>
-                  <td>60.17</td>
-                  <td>70.84</td>
-                  <td>73.56</td>
-                  <td>77.38</td>
-                  <td>59.76</td>
-                </tr>
-                <tr>
-                  <td>59</td>
-                  <td>Gemini-2.0</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>63.29</td>
-                  <td>54.68</td>
-                  <td>59.03</td>
-                  <td>45.76</td>
-                  <td>77.41</td>
-                  <td>76.92</td>
-                  <td>83.57</td>
-                  <td>84.20</td>
-                  <td>85.45</td>
-                  <td>70.03</td>
-                </tr>
-                <tr>
-                  <td>60</td>
-                  <td>Gemini-2.0</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>78.14</td>
-                  <td>68.50</td>
-                  <td>80.62</td>
-                  <td>53.39</td>
-                  <td>74.85</td>
-                  <td>75.08</td>
-                  <td>74.63</td>
-                  <td>80.97</td>
-                  <td>86.31</td>
-                  <td>74.72</td>
-                </tr>
-
-                <!-- GLM-zero-preview Data -->
-                <tr>
-                  <td>61</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>91.37</td>
-                  <td>59.84</td>
-                  <td>96.15</td>
-                  <td>53.72</td>
-                  <td>44.96</td>
-                  <td>88.23</td>
-                  <td>93.58</td>
-                  <td>82.49</td>
-                  <td>86.03</td>
-                  <td>77.37</td>
-                </tr>
-                <tr>
-                  <td>62</td>
-                  <td>GLM-zero-preview</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>91.62</td>
-                  <td>61.29</td>
-                  <td>83.47</td>
-                  <td>29.15</td>
-                  <td>77.83</td>
-                  <td>85.94</td>
-                  <td>83.76</td>
-                  <td>93.01</td>
-                  <td>91.57</td>
-                  <td>77.52</td>
-                </tr>
-                <tr>
-                  <td>63</td>
-                  <td>GLM-zero-preview</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>92.85</td>
-                  <td>65.73</td>
-                  <td>95.28</td>
-                  <td>80.46</td>
-                  <td>74.59</td>
-                  <td>88.67</td>
-                  <td>94.39</td>
-                  <td>92.18</td>
-                  <td>88.92</td>
-                  <td>85.90</td>
-                </tr>
-                <tr>
-                  <td>64</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>92.14</td>
-                  <td>64.90</td>
-                  <td>97.53</td>
-                  <td>61.38</td>
-                  <td>80.24</td>
-                  <td>86.75</td>
-                  <td>91.87</td>
-                  <td>87.62</td>
-                  <td>89.31</td>
-                  <td>83.53</td>
-                </tr>
-                <tr>
-                  <td>65</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>88.45</td>
-                  <td>58.63</td>
-                  <td>94.27</td>
-                  <td>60.84</td>
-                  <td>78.92</td>
-                  <td>85.06</td>
-                  <td>86.79</td>
-                  <td>87.33</td>
-                  <td>86.40</td>
-                  <td>80.74</td>
-                </tr>
-                <tr>
-                  <td>66</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>91.08</td>
-                  <td>61.52</td>
-                  <td>97.84</td>
-                  <td>78.26</td>
-                  <td>84.73</td>
-                  <td>86.49</td>
-                  <td>92.15</td>
-                  <td>87.97</td>
-                  <td>89.64</td>
-                  <td>85.52</td>
-                </tr>
-                <tr>
-                  <td>67</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>92.36</td>
-                  <td>62.19</td>
-                  <td>98.03</td>
-                  <td>83.57</td>
-                  <td>86.48</td>
-                  <td>88.82</td>
-                  <td>90.74</td>
-                  <td>93.25</td>
-                  <td>89.07</td>
-                  <td>87.17</td>
-                </tr>
-                <tr>
-                  <td>68</td>
-                  <td>GLM-zero-preview</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>91.73</td>
-                  <td>63.85</td>
-                  <td>93.42</td>
-                  <td>79.60</td>
-                  <td>76.31</td>
-                  <td>85.94</td>
-                  <td>90.28</td>
-                  <td>95.67</td>
-                  <td>92.53</td>
-                  <td>85.48</td>
-                </tr>
-                <tr>
-                  <td>69</td>
-                  <td>GLM-zero-preview</td>
-                  <td>GPT3.5</td>
-                  <td>92.96</td>
-                  <td>62.47</td>
-                  <td>98.58</td>
-                  <td>62.93</td>
-                  <td>56.84</td>
-                  <td>89.71</td>
-                  <td>92.46</td>
-                  <td>80.35</td>
-                  <td>92.80</td>
-                  <td>81.01</td>
-                </tr>
-                <tr>
-                  <td>70</td>
-                  <td>GLM-zero-preview</td>
-                  <td>GPT4o</td>
-                  <td>88.52</td>
-                  <td>63.09</td>
-                  <td>98.24</td>
-                  <td>59.78</td>
-                  <td>78.43</td>
-                  <td>89.36</td>
-                  <td>89.15</td>
-                  <td>96.02</td>
-                  <td>96.88</td>
-                  <td>84.39</td>
-                </tr>
-                <tr>
-                  <td>71</td>
-                  <td>GLM-zero-preview</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>73.65</td>
-                  <td>51.38</td>
-                  <td>82.97</td>
-                  <td>44.20</td>
-                  <td>74.09</td>
-                  <td>89.57</td>
-                  <td>78.84</td>
-                  <td>77.56</td>
-                  <td>75.91</td>
-                  <td>72.02</td>
-                </tr>
-                <tr>
-                  <td>72</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Gemma 7B</td>
-                  <td>55.43</td>
-                  <td>42.76</td>
-                  <td>43.19</td>
-                  <td>30.68</td>
-                  <td>64.37</td>
-                  <td>65.48</td>
-                  <td>63.07</td>
-                  <td>73.89</td>
-                  <td>71.24</td>
-                  <td>56.68</td>
-                </tr>
-                <tr>
-                  <td>73</td>
-                  <td>GLM-zero-preview</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>64.82</td>
-                  <td>35.14</td>
-                  <td>56.85</td>
-                  <td>37.05</td>
-                  <td>69.28</td>
-                  <td>58.63</td>
-                  <td>69.90</td>
-                  <td>71.73</td>
-                  <td>74.46</td>
-                  <td>59.76</td>
-                </tr>
-                <tr>
-                  <td>74</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>64.50</td>
-                  <td>50.67</td>
-                  <td>57.34</td>
-                  <td>47.82</td>
-                  <td>74.95</td>
-                  <td>75.18</td>
-                  <td>86.27</td>
-                  <td>85.39</td>
-                  <td>88.31</td>
-                  <td>68.34</td>
-                </tr>
-                <tr>
-                  <td>75</td>
-                  <td>GLM-zero-preview</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>76.31</td>
-                  <td>66.48</td>
-                  <td>83.75</td>
-                  <td>54.06</td>
-                  <td>73.89</td>
-                  <td>75.24</td>
-                  <td>75.97</td>
-                  <td>80.62</td>
-                  <td>83.19</td>
-                  <td>74.39</td>
-                </tr>
-
-                <!-- o1-preview Data -->
-                <tr>
-                  <td>76</td>
-                  <td>o1-preview</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>87.45</td>
-                  <td>54.83</td>
-                  <td>90.17</td>
-                  <td>89.62</td>
-                  <td>32.09</td>
-                  <td>88.74</td>
-                  <td>91.28</td>
-                  <td>87.53</td>
-                  <td>87.96</td>
-                  <td>78.85</td>
-                </tr>
-                <tr>
-                  <td>77</td>
-                  <td>o1-preview</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>91.37</td>
-                  <td>57.29</td>
-                  <td>92.64</td>
-                  <td>67.85</td>
-                  <td>62.43</td>
-                  <td>89.56</td>
-                  <td>92.15</td>
-                  <td>88.71</td>
-                  <td>92.08</td>
-                  <td>81.56</td>
-                </tr>
-                <tr>
-                  <td>78</td>
-                  <td>o1-preview</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>92.63</td>
-                  <td>62.75</td>
-                  <td>92.39</td>
-                  <td>90.24</td>
-                  <td>60.81</td>
-                  <td>84.97</td>
-                  <td>92.86</td>
-                  <td>90.34</td>
-                  <td>89.18</td>
-                  <td>84.02</td>
-                </tr>
-                <tr>
-                  <td>79</td>
-                  <td>o1-preview</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>92.14</td>
-                  <td>62.06</td>
-                  <td>92.58</td>
-                  <td>86.93</td>
-                  <td>81.72</td>
-                  <td>85.43</td>
-                  <td>92.07</td>
-                  <td>89.65</td>
-                  <td>88.29</td>
-                  <td>85.65</td>
-                </tr>
-                <tr>
-                  <td>80</td>
-                  <td>o1-preview</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>92.80</td>
-                  <td>61.47</td>
-                  <td>93.25</td>
-                  <td>88.36</td>
-                  <td>60.92</td>
-                  <td>86.58</td>
-                  <td>94.13</td>
-                  <td>87.84</td>
-                  <td>86.77</td>
-                  <td>83.57</td>
-                </tr>
-                <tr>
-                  <td>81</td>
-                  <td>o1-preview</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>89.51</td>
-                  <td>59.86</td>
-                  <td>91.73</td>
-                  <td>87.09</td>
-                  <td>83.42</td>
-                  <td>82.68</td>
-                  <td>90.95</td>
-                  <td>91.27</td>
-                  <td>90.34</td>
-                  <td>85.21</td>
-                </tr>
-                <tr>
-                  <td>82</td>
-                  <td>o1-preview</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>91.62</td>
-                  <td>65.39</td>
-                  <td>91.84</td>
-                  <td>88.57</td>
-                  <td>88.26</td>
-                  <td>88.93</td>
-                  <td>92.48</td>
-                  <td>92.76</td>
-                  <td>92.03</td>
-                  <td>87.99</td>
-                </tr>
-                <tr>
-                  <td>83</td>
-                  <td>o1-preview</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>88.37</td>
-                  <td>64.82</td>
-                  <td>92.15</td>
-                  <td>75.68</td>
-                  <td>80.45</td>
-                  <td>89.61</td>
-                  <td>93.72</td>
-                  <td>95.18</td>
-                  <td>95.87</td>
-                  <td>86.21</td>
-                </tr>
-                <tr>
-                  <td>84</td>
-                  <td>o1-preview</td>
-                  <td>GPT3.5</td>
-                  <td>92.93</td>
-                  <td>59.14</td>
-                  <td>92.86</td>
-                  <td>89.47</td>
-                  <td>53.28</td>
-                  <td>85.79</td>
-                  <td>90.63</td>
-                  <td>90.85</td>
-                  <td>90.42</td>
-                  <td>82.82</td>
-                </tr>
-                <tr>
-                  <td>85</td>
-                  <td>o1-preview</td>
-                  <td>GPT4o</td>
-                  <td>91.25</td>
-                  <td>63.57</td>
-                  <td>92.34</td>
-                  <td>74.92</td>
-                  <td>66.08</td>
-                  <td>87.35</td>
-                  <td>93.41</td>
-                  <td>91.69</td>
-                  <td>94.56</td>
-                  <td>83.91</td>
-                </tr>
-                <tr>
-                  <td>86</td>
-                  <td>o1-preview</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>71.84</td>
-                  <td>50.63</td>
-                  <td>80.29</td>
-                  <td>42.75</td>
-                  <td>71.06</td>
-                  <td>85.38</td>
-                  <td>74.89</td>
-                  <td>75.17</td>
-                  <td>75.04</td>
-                  <td>69.67</td>
-                </tr>
-                <tr>
-                  <td>87</td>
-                  <td>o1-preview</td>
-                  <td>Gemma 7B</td>
-                  <td>52.39</td>
-                  <td>40.81</td>
-                  <td>40.56</td>
-                  <td>28.43</td>
-                  <td>62.97</td>
-                  <td>66.12</td>
-                  <td>60.78</td>
-                  <td>71.25</td>
-                  <td>72.90</td>
-                  <td>55.13</td>
-                </tr>
-                <tr>
-                  <td>88</td>
-                  <td>o1-preview</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>62.73</td>
-                  <td>34.28</td>
-                  <td>55.64</td>
-                  <td>34.95</td>
-                  <td>67.81</td>
-                  <td>55.46</td>
-                  <td>64.37</td>
-                  <td>70.82</td>
-                  <td>74.15</td>
-                  <td>57.80</td>
-                </tr>
-                <tr>
-                  <td>89</td>
-                  <td>o1-preview</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>62.19</td>
-                  <td>52.47</td>
-                  <td>55.03</td>
-                  <td>40.68</td>
-                  <td>73.52</td>
-                  <td>74.89</td>
-                  <td>83.26</td>
-                  <td>84.73</td>
-                  <td>88.31</td>
-                  <td>68.34</td>
-                </tr>
-                <tr>
-                  <td>90</td>
-                  <td>o1-preview</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>73.65</td>
-                  <td>61.92</td>
-                  <td>80.57</td>
-                  <td>52.34</td>
-                  <td>69.85</td>
-                  <td>72.06</td>
-                  <td>73.48</td>
-                  <td>78.91</td>
-                  <td>82.76</td>
-                  <td>71.73</td>
-                </tr>
-
-                <!-- o3-mini Data -->
-                <tr>
-                  <td>91</td>
-                  <td>o3-mini</td>
-                  <td>Mixtral-8x7B-Instruct-v0.1</td>
-                  <td>91.45</td>
-                  <td>82.17</td>
-                  <td>74.93</td>
-                  <td>87.62</td>
-                  <td>37.85</td>
-                  <td>83.04</td>
-                  <td>90.38</td>
-                  <td>88.71</td>
-                  <td>85.29</td>
-                  <td>80.16</td>
-                </tr>
-                <tr>
-                  <td>92</td>
-                  <td>o3-mini</td>
-                  <td>LLaMA3.1-8B-Instruct</td>
-                  <td>82.36</td>
-                  <td>57.88</td>
-                  <td>82.59</td>
-                  <td>73.14</td>
-                  <td>54.27</td>
-                  <td>85.96</td>
-                  <td>90.73</td>
-                  <td>90.15</td>
-                  <td>91.42</td>
-                  <td>78.72</td>
-                </tr>
-                <tr>
-                  <td>93</td>
-                  <td>o3-mini</td>
-                  <td>LLaMA3.3-70B-Instruct</td>
-                  <td>91.83</td>
-                  <td>73.52</td>
-                  <td>83.47</td>
-                  <td>89.06</td>
-                  <td>66.31</td>
-                  <td>82.58</td>
-                  <td>92.69</td>
-                  <td>91.84</td>
-                  <td>92.37</td>
-                  <td>84.85</td>
-                </tr>
-                <tr>
-                  <td>94</td>
-                  <td>o3-mini</td>
-                  <td>Qwen2.5-7B-Instruct</td>
-                  <td>82.94</td>
-                  <td>55.67</td>
-                  <td>91.28</td>
-                  <td>86.45</td>
-                  <td>73.09</td>
-                  <td>86.74</td>
-                  <td>91.53</td>
-                  <td>87.62</td>
-                  <td>88.91</td>
-                  <td>82.69</td>
-                </tr>
-                <tr>
-                  <td>95</td>
-                  <td>o3-mini</td>
-                  <td>Gemma-2-9b-it</td>
-                  <td>82.15</td>
-                  <td>55.39</td>
-                  <td>91.76</td>
-                  <td>88.83</td>
-                  <td>63.42</td>
-                  <td>84.95</td>
-                  <td>92.18</td>
-                  <td>85.67</td>
-                  <td>86.50</td>
-                  <td>81.21</td>
-                </tr>
-                <tr>
-                  <td>96</td>
-                  <td>o3-mini</td>
-                  <td>Gemini1.5-flash</td>
-                  <td>73.62</td>
-                  <td>55.81</td>
-                  <td>91.04</td>
-                  <td>87.35</td>
-                  <td>79.68</td>
-                  <td>83.27</td>
-                  <td>90.89</td>
-                  <td>89.76</td>
-                  <td>92.03</td>
-                  <td>82.61</td>
-                </tr>
-                <tr>
-                  <td>97</td>
-                  <td>o3-mini</td>
-                  <td>Gemini1.5-pro</td>
-                  <td>82.73</td>
-                  <td>73.95</td>
-                  <td>97.12</td>
-                  <td>90.84</td>
-                  <td>84.57</td>
-                  <td>87.46</td>
-                  <td>88.31</td>
-                  <td>89.59</td>
-                  <td>91.24</td>
-                  <td>87.31</td>
-                </tr>
-                <tr>
-                  <td>98</td>
-                  <td>o3-mini</td>
-                  <td>claude-3-5-sonnet-20241022</td>
-                  <td>88.29</td>
-                  <td>79.43</td>
-                  <td>91.87</td>
-                  <td>85.06</td>
-                  <td>82.39</td>
-                  <td>89.82</td>
-                  <td>92.75</td>
-                  <td>90.48</td>
-                  <td>91.57</td>
-                  <td>87.96</td>
-                </tr>
-                <tr>
-                  <td>99</td>
-                  <td>o3-mini</td>
-                  <td>GPT3.5</td>
-                  <td>91.68</td>
-                  <td>66.34</td>
-                  <td>83.58</td>
-                  <td>79.72</td>
-                  <td>65.18</td>
-                  <td>82.95</td>
-                  <td>88.41</td>
-                  <td>90.93</td>
-                  <td>91.06</td>
-                  <td>82.21</td>
-                </tr>
-                <tr>
-                  <td>100</td>
-                  <td>o3-mini</td>
-                  <td>GPT4o</td>
-                  <td>91.37</td>
-                  <td>73.26</td>
-                  <td>91.49</td>
-                  <td>84.91</td>
-                  <td>76.03</td>
-                  <td>85.64</td>
-                  <td>91.85</td>
-                  <td>91.72</td>
-                  <td>94.08</td>
-                  <td>86.71</td>
-                </tr>
-                <tr>
-                  <td>101</td>
-                  <td>o3-mini</td>
-                  <td>GLM-4-9B-Chat</td>
-                  <td>73.85</td>
-                  <td>62.14</td>
-                  <td>76.92</td>
-                  <td>41.78</td>
-                  <td>63.45</td>
-                  <td>86.50</td>
-                  <td>75.63</td>
-                  <td>76.84</td>
-                  <td>77.39</td>
-                  <td>70.50</td>
-                </tr>
-                <tr>
-                  <td>102</td>
-                  <td>o3-mini</td>
-                  <td>Gemma 7B</td>
-                  <td>55.27</td>
-                  <td>52.90</td>
-                  <td>39.15</td>
-                  <td>31.64</td>
-                  <td>50.83</td>
-                  <td>69.72</td>
-                  <td>61.48</td>
-                  <td>72.36</td>
-                  <td>73.81</td>
-                  <td>56.35</td>
-                </tr>
-                <tr>
-                  <td>103</td>
-                  <td>o3-mini</td>
-                  <td>ChatGLM2-6B</td>
-                  <td>65.43</td>
-                  <td>43.08</td>
-                  <td>50.76</td>
-                  <td>35.29</td>
-                  <td>49.57</td>
-                  <td>58.64</td>
-                  <td>63.92</td>
-                  <td>72.15</td>
-                  <td>75.34</td>
-                  <td>57.13</td>
-                </tr>
-                <tr>
-                  <td>104</td>
-                  <td>o3-mini</td>
-                  <td>Qwen2.5-1.5B</td>
-                  <td>66.58</td>
-                  <td>60.47</td>
-                  <td>51.83</td>
-                  <td>39.26</td>
-                  <td>70.14</td>
-                  <td>77.89</td>
-                  <td>80.05</td>
-                  <td>80.72</td>
-                  <td>85.46</td>
-                  <td>68.04</td>
-                </tr>
-                <tr>
-                  <td>105</td>
-                  <td>o3-mini</td>
-                  <td>Phi-3-mini 3.8B</td>
-                  <td>76.19</td>
-                  <td>72.53</td>
-                  <td>78.64</td>
-                  <td>55.07</td>
-                  <td>59.86</td>
-                  <td>70.21</td>
-                  <td>75.38</td>
-                  <td>80.95</td>
-                  <td>83.27</td>
-                  <td>72.46</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <!-- Image carousel -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/poster.png" alt="MY ALT TEXT" />
+                        <h2 class="subtitle has-text-centered">
+                            Overview of the DeepThink Bench framework. 1) Thought Extraction, focusing on the generation
+                            of deep thinking; 2) Prompt Construction, mainly for integrating deep thinking; 3)
+                            Evaluation on multiple tasks.
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <!-- End image carousel -->
 
 
-<!--BibTeX citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+
+    <!-- Leaderboard section -->
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-3" style="text-align: center;">Leaderboard</h2>
+
+                <!-- Leaderboard Module -->
+                <div class="leaderboard-module">
+                    <div class="module-container">
+                        <div class="table-container">
+                            <table
+                                class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth table-center-all"
+                                style="--stripe-color: #fafafa;">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">#</th>
+                                        <th colspan="2">Model</th>
+                                        <th colspan="9">Dataset</th>
+                                        <th> </th>
+                                    </tr>
+                                    <tr>
+                                        <th>LRM</th>
+                                        <th>LLM</th>
+                                        <th class="dataset-column sortable">OpenBookQA</th>
+                                        <th class="dataset-column sortable">HellaSwag</th>
+                                        <th class="dataset-column sortable">GSM8K</th>
+                                        <th class="dataset-column sortable">MATH</th>
+                                        <th class="dataset-column sortable">HumanEval</th>
+                                        <th class="dataset-column sortable">SST-2</th>
+                                        <th class="dataset-column sortable">IMDB</th>
+                                        <th class="dataset-column sortable">SQuAD</th>
+                                        <th class="dataset-column sortable">DROP</th>
+                                        <th class="dataset-column sortable"
+                                            style="background-color: #dddddd !important;">Avg</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- R1 Data -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>87.19</td>
+                                        <td>57.66</td>
+                                        <td>91.85</td>
+                                        <td>62.17</td>
+                                        <td>27.50</td>
+                                        <td>89.89</td>
+                                        <td>93.20</td>
+                                        <td>88.39</td>
+                                        <td>90.17</td>
+                                        <td>76.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>89.37</td>
+                                        <td>59.84</td>
+                                        <td>93.15</td>
+                                        <td>62.56</td>
+                                        <td>83.01</td>
+                                        <td>89.99</td>
+                                        <td>94.42</td>
+                                        <td>91.73</td>
+                                        <td>94.28</td>
+                                        <td>84.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>88.50</td>
+                                        <td>62.31</td>
+                                        <td>96.76</td>
+                                        <td>80.44</td>
+                                        <td>85.89</td>
+                                        <td>91.22</td>
+                                        <td>94.55</td>
+                                        <td>90.67</td>
+                                        <td>88.93</td>
+                                        <td>86.59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>88.12</td>
+                                        <td>60.45</td>
+                                        <td>96.78</td>
+                                        <td>56.90</td>
+                                        <td>82.34</td>
+                                        <td>89.56</td>
+                                        <td>95.78</td>
+                                        <td>89.01</td>
+                                        <td>91.23</td>
+                                        <td>83.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>89.45</td>
+                                        <td>59.67</td>
+                                        <td>89.89</td>
+                                        <td>60.12</td>
+                                        <td>80.34</td>
+                                        <td>88.56</td>
+                                        <td>93.78</td>
+                                        <td>91.90</td>
+                                        <td>90.12</td>
+                                        <td>82.65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>88.34</td>
+                                        <td>60.56</td>
+                                        <td>97.78</td>
+                                        <td>78.90</td>
+                                        <td>90.12</td>
+                                        <td>90.34</td>
+                                        <td>94.56</td>
+                                        <td>93.78</td>
+                                        <td>91.90</td>
+                                        <td>87.36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>87.12</td>
+                                        <td>61.34</td>
+                                        <td>97.56</td>
+                                        <td>83.78</td>
+                                        <td>93.90</td>
+                                        <td>90.12</td>
+                                        <td>94.34</td>
+                                        <td>91.56</td>
+                                        <td>91.78</td>
+                                        <td>87.94</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>82.90</td>
+                                        <td>62.12</td>
+                                        <td>91.34</td>
+                                        <td>76.56</td>
+                                        <td>70.78</td>
+                                        <td>90.90</td>
+                                        <td>94.12</td>
+                                        <td>93.34</td>
+                                        <td>93.56</td>
+                                        <td>83.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>GPT3.5</td>
+                                        <td>89.78</td>
+                                        <td>59.90</td>
+                                        <td>92.12</td>
+                                        <td>66.34</td>
+                                        <td>59.56</td>
+                                        <td>91.78</td>
+                                        <td>95.90</td>
+                                        <td>93.12</td>
+                                        <td>90.34</td>
+                                        <td>82.09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>GPT4o</td>
+                                        <td>82.56</td>
+                                        <td>62.78</td>
+                                        <td>97.90</td>
+                                        <td>61.12</td>
+                                        <td>73.34</td>
+                                        <td>90.56</td>
+                                        <td>94.78</td>
+                                        <td>91.90</td>
+                                        <td>93.12</td>
+                                        <td>83.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>78.84</td>
+                                        <td>53.12</td>
+                                        <td>83.97</td>
+                                        <td>52.45</td>
+                                        <td>79.31</td>
+                                        <td>81.66</td>
+                                        <td>84.08</td>
+                                        <td>85.23</td>
+                                        <td>80.77</td>
+                                        <td>75.49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Gemma 7B</td>
+                                        <td>62.39</td>
+                                        <td>31.85</td>
+                                        <td>53.72</td>
+                                        <td>30.14</td>
+                                        <td>69.93</td>
+                                        <td>67.28</td>
+                                        <td>69.55</td>
+                                        <td>70.49</td>
+                                        <td>74.61</td>
+                                        <td>58.88</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>61.27</td>
+                                        <td>32.90</td>
+                                        <td>54.03</td>
+                                        <td>32.68</td>
+                                        <td>70.19</td>
+                                        <td>66.44</td>
+                                        <td>67.82</td>
+                                        <td>72.37</td>
+                                        <td>70.15</td>
+                                        <td>58.65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>70.56</td>
+                                        <td>54.41</td>
+                                        <td>69.88</td>
+                                        <td>40.27</td>
+                                        <td>73.95</td>
+                                        <td>82.33</td>
+                                        <td>84.76</td>
+                                        <td>86.09</td>
+                                        <td>90.42</td>
+                                        <td>72.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Deepseek-R1</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>81.63</td>
+                                        <td>61.78</td>
+                                        <td>87.25</td>
+                                        <td>59.06</td>
+                                        <td>76.84</td>
+                                        <td>89.97</td>
+                                        <td>91.52</td>
+                                        <td>89.30</td>
+                                        <td>88.71</td>
+                                        <td>80.67</td>
+                                    </tr>
+
+                                    <!-- Deepseek-R1-zero Data -->
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>89.45</td>
+                                        <td>58.83</td>
+                                        <td>93.12</td>
+                                        <td>65.74</td>
+                                        <td>26.37</td>
+                                        <td>88.95</td>
+                                        <td>94.08</td>
+                                        <td>89.63</td>
+                                        <td>81.52</td>
+                                        <td>76.41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>89.17</td>
+                                        <td>60.29</td>
+                                        <td>94.86</td>
+                                        <td>63.55</td>
+                                        <td>81.33</td>
+                                        <td>87.44</td>
+                                        <td>89.77</td>
+                                        <td>92.16</td>
+                                        <td>83.09</td>
+                                        <td>82.41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>93.68</td>
+                                        <td>67.41</td>
+                                        <td>96.03</td>
+                                        <td>78.92</td>
+                                        <td>84.57</td>
+                                        <td>90.24</td>
+                                        <td>94.91</td>
+                                        <td>88.05</td>
+                                        <td>87.38</td>
+                                        <td>86.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>92.73</td>
+                                        <td>62.85</td>
+                                        <td>97.56</td>
+                                        <td>58.39</td>
+                                        <td>83.64</td>
+                                        <td>89.47</td>
+                                        <td>93.82</td>
+                                        <td>91.25</td>
+                                        <td>87.93</td>
+                                        <td>84.18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>90.06</td>
+                                        <td>66.58</td>
+                                        <td>98.14</td>
+                                        <td>59.27</td>
+                                        <td>79.81</td>
+                                        <td>89.62</td>
+                                        <td>94.36</td>
+                                        <td>93.71</td>
+                                        <td>87.48</td>
+                                        <td>84.34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>91.83</td>
+                                        <td>65.97</td>
+                                        <td>97.28</td>
+                                        <td>80.45</td>
+                                        <td>88.19</td>
+                                        <td>87.03</td>
+                                        <td>94.55</td>
+                                        <td>95.22</td>
+                                        <td>83.76</td>
+                                        <td>87.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>91.24</td>
+                                        <td>66.35</td>
+                                        <td>98.67</td>
+                                        <td>83.09</td>
+                                        <td>94.72</td>
+                                        <td>90.85</td>
+                                        <td>93.41</td>
+                                        <td>90.63</td>
+                                        <td>84.94</td>
+                                        <td>88.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>94.50</td>
+                                        <td>68.92</td>
+                                        <td>86.37</td>
+                                        <td>79.18</td>
+                                        <td>72.53</td>
+                                        <td>91.46</td>
+                                        <td>96.15</td>
+                                        <td>90.84</td>
+                                        <td>85.29</td>
+                                        <td>85.03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>GPT3.5</td>
+                                        <td>91.77</td>
+                                        <td>66.44</td>
+                                        <td>96.85</td>
+                                        <td>68.73</td>
+                                        <td>60.29</td>
+                                        <td>88.96</td>
+                                        <td>93.59</td>
+                                        <td>91.38</td>
+                                        <td>86.67</td>
+                                        <td>82.74</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>GPT4o</td>
+                                        <td>90.32</td>
+                                        <td>69.15</td>
+                                        <td>98.03</td>
+                                        <td>65.88</td>
+                                        <td>74.42</td>
+                                        <td>90.57</td>
+                                        <td>94.28</td>
+                                        <td>92.16</td>
+                                        <td>87.84</td>
+                                        <td>84.74</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>79.61</td>
+                                        <td>52.34</td>
+                                        <td>84.97</td>
+                                        <td>50.81</td>
+                                        <td>75.26</td>
+                                        <td>84.73</td>
+                                        <td>81.69</td>
+                                        <td>83.95</td>
+                                        <td>84.08</td>
+                                        <td>75.27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Gemma 7B</td>
+                                        <td>62.93</td>
+                                        <td>31.78</td>
+                                        <td>53.45</td>
+                                        <td>30.62</td>
+                                        <td>69.14</td>
+                                        <td>68.37</td>
+                                        <td>67.85</td>
+                                        <td>74.29</td>
+                                        <td>72.51</td>
+                                        <td>58.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>64.20</td>
+                                        <td>30.56</td>
+                                        <td>57.89</td>
+                                        <td>34.17</td>
+                                        <td>68.48</td>
+                                        <td>70.92</td>
+                                        <td>69.63</td>
+                                        <td>70.74</td>
+                                        <td>74.39</td>
+                                        <td>60.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>69.35</td>
+                                        <td>58.07</td>
+                                        <td>66.82</td>
+                                        <td>42.59</td>
+                                        <td>75.83</td>
+                                        <td>80.46</td>
+                                        <td>83.19</td>
+                                        <td>84.03</td>
+                                        <td>88.72</td>
+                                        <td>72.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>Deepseek-R1-zero</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>80.88</td>
+                                        <td>61.24</td>
+                                        <td>87.57</td>
+                                        <td>57.95</td>
+                                        <td>78.06</td>
+                                        <td>84.89</td>
+                                        <td>88.44</td>
+                                        <td>85.97</td>
+                                        <td>90.31</td>
+                                        <td>79.48</td>
+                                    </tr>
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+                                    <!-- QwQ-32B Data -->
+                                    <tr>
+                                        <td>31</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>87.23</td>
+                                        <td>57.84</td>
+                                        <td>95.16</td>
+                                        <td>63.47</td>
+                                        <td>48.95</td>
+                                        <td>90.03</td>
+                                        <td>88.76</td>
+                                        <td>87.59</td>
+                                        <td>85.12</td>
+                                        <td>78.24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>QwQ-32B</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>88.45</td>
+                                        <td>64.91</td>
+                                        <td>92.37</td>
+                                        <td>65.28</td>
+                                        <td>77.64</td>
+                                        <td>89.82</td>
+                                        <td>89.15</td>
+                                        <td>88.03</td>
+                                        <td>92.74</td>
+                                        <td>83.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>QwQ-32B</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>90.68</td>
+                                        <td>63.52</td>
+                                        <td>97.85</td>
+                                        <td>83.19</td>
+                                        <td>76.43</td>
+                                        <td>91.27</td>
+                                        <td>90.56</td>
+                                        <td>89.89</td>
+                                        <td>86.31</td>
+                                        <td>85.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>88.94</td>
+                                        <td>64.03</td>
+                                        <td>96.72</td>
+                                        <td>50.68</td>
+                                        <td>81.45</td>
+                                        <td>90.58</td>
+                                        <td>91.39</td>
+                                        <td>91.84</td>
+                                        <td>87.07</td>
+                                        <td>82.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>88.62</td>
+                                        <td>62.47</td>
+                                        <td>99.35</td>
+                                        <td>72.81</td>
+                                        <td>78.26</td>
+                                        <td>90.49</td>
+                                        <td>90.93</td>
+                                        <td>84.75</td>
+                                        <td>87.68</td>
+                                        <td>83.93</td>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>88.15</td>
+                                        <td>60.89</td>
+                                        <td>97.04</td>
+                                        <td>82.57</td>
+                                        <td>88.32</td>
+                                        <td>90.66</td>
+                                        <td>90.28</td>
+                                        <td>90.17</td>
+                                        <td>90.84</td>
+                                        <td>86.55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>37</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>90.73</td>
+                                        <td>67.42</td>
+                                        <td>98.25</td>
+                                        <td>85.96</td>
+                                        <td>91.08</td>
+                                        <td>90.79</td>
+                                        <td>91.63</td>
+                                        <td>92.35</td>
+                                        <td>88.47</td>
+                                        <td>88.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>38</td>
+                                        <td>QwQ-32B</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>91.86</td>
+                                        <td>67.59</td>
+                                        <td>97.13</td>
+                                        <td>76.24</td>
+                                        <td>66.83</td>
+                                        <td>89.41</td>
+                                        <td>91.05</td>
+                                        <td>92.76</td>
+                                        <td>93.48</td>
+                                        <td>85.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>39</td>
+                                        <td>QwQ-32B</td>
+                                        <td>GPT3.5</td>
+                                        <td>89.27</td>
+                                        <td>65.74</td>
+                                        <td>97.82</td>
+                                        <td>65.39</td>
+                                        <td>50.62</td>
+                                        <td>90.84</td>
+                                        <td>88.97</td>
+                                        <td>88.46</td>
+                                        <td>86.51</td>
+                                        <td>80.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>QwQ-32B</td>
+                                        <td>GPT4o</td>
+                                        <td>89.63</td>
+                                        <td>62.18</td>
+                                        <td>98.06</td>
+                                        <td>62.75</td>
+                                        <td>82.93</td>
+                                        <td>92.15</td>
+                                        <td>89.32</td>
+                                        <td>90.81</td>
+                                        <td>90.43</td>
+                                        <td>84.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>QwQ-32B</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>70.35</td>
+                                        <td>46.82</td>
+                                        <td>80.57</td>
+                                        <td>43.06</td>
+                                        <td>70.19</td>
+                                        <td>84.28</td>
+                                        <td>78.64</td>
+                                        <td>75.39</td>
+                                        <td>78.91</td>
+                                        <td>69.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Gemma 7B</td>
+                                        <td>55.47</td>
+                                        <td>30.93</td>
+                                        <td>48.61</td>
+                                        <td>27.84</td>
+                                        <td>60.72</td>
+                                        <td>60.35</td>
+                                        <td>62.89</td>
+                                        <td>69.52</td>
+                                        <td>70.68</td>
+                                        <td>54.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>43</td>
+                                        <td>QwQ-32B</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>62.14</td>
+                                        <td>27.85</td>
+                                        <td>50.32</td>
+                                        <td>30.67</td>
+                                        <td>60.48</td>
+                                        <td>58.73</td>
+                                        <td>68.42</td>
+                                        <td>69.15</td>
+                                        <td>72.86</td>
+                                        <td>55.62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>44</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>63.58</td>
+                                        <td>55.09</td>
+                                        <td>60.47</td>
+                                        <td>40.82</td>
+                                        <td>72.34</td>
+                                        <td>75.91</td>
+                                        <td>80.28</td>
+                                        <td>80.63</td>
+                                        <td>81.79</td>
+                                        <td>67.88</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45</td>
+                                        <td>QwQ-32B</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>77.26</td>
+                                        <td>66.43</td>
+                                        <td>84.95</td>
+                                        <td>50.38</td>
+                                        <td>71.62</td>
+                                        <td>73.85</td>
+                                        <td>73.09</td>
+                                        <td>79.24</td>
+                                        <td>83.57</td>
+                                        <td>73.38</td>
+                                    </tr>
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+                                    <!-- Gemini-2.0 Data -->
+                                    <tr>
+                                        <td>46</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>88.34</td>
+                                        <td>56.17</td>
+                                        <td>95.89</td>
+                                        <td>82.03</td>
+                                        <td>31.76</td>
+                                        <td>86.45</td>
+                                        <td>88.92</td>
+                                        <td>94.57</td>
+                                        <td>87.28</td>
+                                        <td>79.05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>47</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>90.61</td>
+                                        <td>64.83</td>
+                                        <td>95.12</td>
+                                        <td>77.49</td>
+                                        <td>83.95</td>
+                                        <td>85.34</td>
+                                        <td>89.07</td>
+                                        <td>94.26</td>
+                                        <td>91.73</td>
+                                        <td>85.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>48</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>90.25</td>
+                                        <td>67.90</td>
+                                        <td>95.47</td>
+                                        <td>86.58</td>
+                                        <td>80.63</td>
+                                        <td>88.14</td>
+                                        <td>90.82</td>
+                                        <td>94.39</td>
+                                        <td>86.04</td>
+                                        <td>86.69</td>
+                                    </tr>
+                                    <tr>
+                                        <td>49</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>91.78</td>
+                                        <td>64.29</td>
+                                        <td>94.63</td>
+                                        <td>70.85</td>
+                                        <td>82.41</td>
+                                        <td>88.97</td>
+                                        <td>89.51</td>
+                                        <td>92.16</td>
+                                        <td>92.88</td>
+                                        <td>85.28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>90.42</td>
+                                        <td>66.55</td>
+                                        <td>95.21</td>
+                                        <td>83.74</td>
+                                        <td>69.38</td>
+                                        <td>87.62</td>
+                                        <td>90.19</td>
+                                        <td>93.05</td>
+                                        <td>85.93</td>
+                                        <td>84.68</td>
+                                    </tr>
+                                    <tr>
+                                        <td>51</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>91.06</td>
+                                        <td>61.24</td>
+                                        <td>94.75</td>
+                                        <td>87.32</td>
+                                        <td>78.09</td>
+                                        <td>86.80</td>
+                                        <td>90.67</td>
+                                        <td>91.84</td>
+                                        <td>91.37</td>
+                                        <td>85.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>52</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>91.49</td>
+                                        <td>60.83</td>
+                                        <td>96.17</td>
+                                        <td>89.46</td>
+                                        <td>89.27</td>
+                                        <td>86.53</td>
+                                        <td>87.95</td>
+                                        <td>94.71</td>
+                                        <td>89.02</td>
+                                        <td>87.27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>53</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>90.93</td>
+                                        <td>69.47</td>
+                                        <td>94.38</td>
+                                        <td>87.15</td>
+                                        <td>75.84</td>
+                                        <td>89.26</td>
+                                        <td>90.44</td>
+                                        <td>96.03</td>
+                                        <td>93.65</td>
+                                        <td>87.46</td>
+                                    </tr>
+                                    <tr>
+                                        <td>54</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>GPT3.5</td>
+                                        <td>91.85</td>
+                                        <td>63.72</td>
+                                        <td>95.54</td>
+                                        <td>86.97</td>
+                                        <td>56.29</td>
+                                        <td>87.18</td>
+                                        <td>88.73</td>
+                                        <td>93.82</td>
+                                        <td>91.49</td>
+                                        <td>83.95</td>
+                                    </tr>
+                                    <tr>
+                                        <td>55</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>GPT4o</td>
+                                        <td>88.67</td>
+                                        <td>61.08</td>
+                                        <td>94.86</td>
+                                        <td>72.53</td>
+                                        <td>79.64</td>
+                                        <td>87.40</td>
+                                        <td>86.15</td>
+                                        <td>95.28</td>
+                                        <td>94.07</td>
+                                        <td>84.41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>56</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>72.56</td>
+                                        <td>50.39</td>
+                                        <td>83.74</td>
+                                        <td>44.82</td>
+                                        <td>75.91</td>
+                                        <td>88.23</td>
+                                        <td>77.68</td>
+                                        <td>76.45</td>
+                                        <td>78.90</td>
+                                        <td>72.08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Gemma 7B</td>
+                                        <td>53.47</td>
+                                        <td>44.12</td>
+                                        <td>44.95</td>
+                                        <td>31.60</td>
+                                        <td>63.87</td>
+                                        <td>66.04</td>
+                                        <td>62.31</td>
+                                        <td>72.89</td>
+                                        <td>72.15</td>
+                                        <td>56.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>58</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>63.83</td>
+                                        <td>34.75</td>
+                                        <td>55.28</td>
+                                        <td>35.43</td>
+                                        <td>66.59</td>
+                                        <td>60.17</td>
+                                        <td>70.84</td>
+                                        <td>73.56</td>
+                                        <td>77.38</td>
+                                        <td>59.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>59</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>63.29</td>
+                                        <td>54.68</td>
+                                        <td>59.03</td>
+                                        <td>45.76</td>
+                                        <td>77.41</td>
+                                        <td>76.92</td>
+                                        <td>83.57</td>
+                                        <td>84.20</td>
+                                        <td>85.45</td>
+                                        <td>70.03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60</td>
+                                        <td>Gemini-2.0</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>78.14</td>
+                                        <td>68.50</td>
+                                        <td>80.62</td>
+                                        <td>53.39</td>
+                                        <td>74.85</td>
+                                        <td>75.08</td>
+                                        <td>74.63</td>
+                                        <td>80.97</td>
+                                        <td>86.31</td>
+                                        <td>74.72</td>
+                                    </tr>
 
+                                    <!-- GLM-zero-preview Data -->
+                                    <tr>
+                                        <td>61</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>91.37</td>
+                                        <td>59.84</td>
+                                        <td>96.15</td>
+                                        <td>53.72</td>
+                                        <td>44.96</td>
+                                        <td>88.23</td>
+                                        <td>93.58</td>
+                                        <td>82.49</td>
+                                        <td>86.03</td>
+                                        <td>77.37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>62</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>91.62</td>
+                                        <td>61.29</td>
+                                        <td>83.47</td>
+                                        <td>29.15</td>
+                                        <td>77.83</td>
+                                        <td>85.94</td>
+                                        <td>83.76</td>
+                                        <td>93.01</td>
+                                        <td>91.57</td>
+                                        <td>77.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>92.85</td>
+                                        <td>65.73</td>
+                                        <td>95.28</td>
+                                        <td>80.46</td>
+                                        <td>74.59</td>
+                                        <td>88.67</td>
+                                        <td>94.39</td>
+                                        <td>92.18</td>
+                                        <td>88.92</td>
+                                        <td>85.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>92.14</td>
+                                        <td>64.90</td>
+                                        <td>97.53</td>
+                                        <td>61.38</td>
+                                        <td>80.24</td>
+                                        <td>86.75</td>
+                                        <td>91.87</td>
+                                        <td>87.62</td>
+                                        <td>89.31</td>
+                                        <td>83.53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>88.45</td>
+                                        <td>58.63</td>
+                                        <td>94.27</td>
+                                        <td>60.84</td>
+                                        <td>78.92</td>
+                                        <td>85.06</td>
+                                        <td>86.79</td>
+                                        <td>87.33</td>
+                                        <td>86.40</td>
+                                        <td>80.74</td>
+                                    </tr>
+                                    <tr>
+                                        <td>66</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>91.08</td>
+                                        <td>61.52</td>
+                                        <td>97.84</td>
+                                        <td>78.26</td>
+                                        <td>84.73</td>
+                                        <td>86.49</td>
+                                        <td>92.15</td>
+                                        <td>87.97</td>
+                                        <td>89.64</td>
+                                        <td>85.52</td>
+                                    </tr>
+                                    <tr>
+                                        <td>67</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>92.36</td>
+                                        <td>62.19</td>
+                                        <td>98.03</td>
+                                        <td>83.57</td>
+                                        <td>86.48</td>
+                                        <td>88.82</td>
+                                        <td>90.74</td>
+                                        <td>93.25</td>
+                                        <td>89.07</td>
+                                        <td>87.17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>68</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>91.73</td>
+                                        <td>63.85</td>
+                                        <td>93.42</td>
+                                        <td>79.60</td>
+                                        <td>76.31</td>
+                                        <td>85.94</td>
+                                        <td>90.28</td>
+                                        <td>95.67</td>
+                                        <td>92.53</td>
+                                        <td>85.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>69</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>GPT3.5</td>
+                                        <td>92.96</td>
+                                        <td>62.47</td>
+                                        <td>98.58</td>
+                                        <td>62.93</td>
+                                        <td>56.84</td>
+                                        <td>89.71</td>
+                                        <td>92.46</td>
+                                        <td>80.35</td>
+                                        <td>92.80</td>
+                                        <td>81.01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>70</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>GPT4o</td>
+                                        <td>88.52</td>
+                                        <td>63.09</td>
+                                        <td>98.24</td>
+                                        <td>59.78</td>
+                                        <td>78.43</td>
+                                        <td>89.36</td>
+                                        <td>89.15</td>
+                                        <td>96.02</td>
+                                        <td>96.88</td>
+                                        <td>84.39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>71</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>73.65</td>
+                                        <td>51.38</td>
+                                        <td>82.97</td>
+                                        <td>44.20</td>
+                                        <td>74.09</td>
+                                        <td>89.57</td>
+                                        <td>78.84</td>
+                                        <td>77.56</td>
+                                        <td>75.91</td>
+                                        <td>72.02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>72</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Gemma 7B</td>
+                                        <td>55.43</td>
+                                        <td>42.76</td>
+                                        <td>43.19</td>
+                                        <td>30.68</td>
+                                        <td>64.37</td>
+                                        <td>65.48</td>
+                                        <td>63.07</td>
+                                        <td>73.89</td>
+                                        <td>71.24</td>
+                                        <td>56.68</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>64.82</td>
+                                        <td>35.14</td>
+                                        <td>56.85</td>
+                                        <td>37.05</td>
+                                        <td>69.28</td>
+                                        <td>58.63</td>
+                                        <td>69.90</td>
+                                        <td>71.73</td>
+                                        <td>74.46</td>
+                                        <td>59.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>74</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>64.50</td>
+                                        <td>50.67</td>
+                                        <td>57.34</td>
+                                        <td>47.82</td>
+                                        <td>74.95</td>
+                                        <td>75.18</td>
+                                        <td>86.27</td>
+                                        <td>85.39</td>
+                                        <td>88.31</td>
+                                        <td>68.34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>75</td>
+                                        <td>GLM-zero-preview</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>76.31</td>
+                                        <td>66.48</td>
+                                        <td>83.75</td>
+                                        <td>54.06</td>
+                                        <td>73.89</td>
+                                        <td>75.24</td>
+                                        <td>75.97</td>
+                                        <td>80.62</td>
+                                        <td>83.19</td>
+                                        <td>74.39</td>
+                                    </tr>
+
+                                    <!-- o1-preview Data -->
+                                    <tr>
+                                        <td>76</td>
+                                        <td>o1-preview</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>87.45</td>
+                                        <td>54.83</td>
+                                        <td>90.17</td>
+                                        <td>89.62</td>
+                                        <td>32.09</td>
+                                        <td>88.74</td>
+                                        <td>91.28</td>
+                                        <td>87.53</td>
+                                        <td>87.96</td>
+                                        <td>78.85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>77</td>
+                                        <td>o1-preview</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>91.37</td>
+                                        <td>57.29</td>
+                                        <td>92.64</td>
+                                        <td>67.85</td>
+                                        <td>62.43</td>
+                                        <td>89.56</td>
+                                        <td>92.15</td>
+                                        <td>88.71</td>
+                                        <td>92.08</td>
+                                        <td>81.56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>78</td>
+                                        <td>o1-preview</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>92.63</td>
+                                        <td>62.75</td>
+                                        <td>92.39</td>
+                                        <td>90.24</td>
+                                        <td>60.81</td>
+                                        <td>84.97</td>
+                                        <td>92.86</td>
+                                        <td>90.34</td>
+                                        <td>89.18</td>
+                                        <td>84.02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>79</td>
+                                        <td>o1-preview</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>92.14</td>
+                                        <td>62.06</td>
+                                        <td>92.58</td>
+                                        <td>86.93</td>
+                                        <td>81.72</td>
+                                        <td>85.43</td>
+                                        <td>92.07</td>
+                                        <td>89.65</td>
+                                        <td>88.29</td>
+                                        <td>85.65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>80</td>
+                                        <td>o1-preview</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>92.80</td>
+                                        <td>61.47</td>
+                                        <td>93.25</td>
+                                        <td>88.36</td>
+                                        <td>60.92</td>
+                                        <td>86.58</td>
+                                        <td>94.13</td>
+                                        <td>87.84</td>
+                                        <td>86.77</td>
+                                        <td>83.57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>81</td>
+                                        <td>o1-preview</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>89.51</td>
+                                        <td>59.86</td>
+                                        <td>91.73</td>
+                                        <td>87.09</td>
+                                        <td>83.42</td>
+                                        <td>82.68</td>
+                                        <td>90.95</td>
+                                        <td>91.27</td>
+                                        <td>90.34</td>
+                                        <td>85.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>82</td>
+                                        <td>o1-preview</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>91.62</td>
+                                        <td>65.39</td>
+                                        <td>91.84</td>
+                                        <td>88.57</td>
+                                        <td>88.26</td>
+                                        <td>88.93</td>
+                                        <td>92.48</td>
+                                        <td>92.76</td>
+                                        <td>92.03</td>
+                                        <td>87.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>83</td>
+                                        <td>o1-preview</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>88.37</td>
+                                        <td>64.82</td>
+                                        <td>92.15</td>
+                                        <td>75.68</td>
+                                        <td>80.45</td>
+                                        <td>89.61</td>
+                                        <td>93.72</td>
+                                        <td>95.18</td>
+                                        <td>95.87</td>
+                                        <td>86.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>84</td>
+                                        <td>o1-preview</td>
+                                        <td>GPT3.5</td>
+                                        <td>92.93</td>
+                                        <td>59.14</td>
+                                        <td>92.86</td>
+                                        <td>89.47</td>
+                                        <td>53.28</td>
+                                        <td>85.79</td>
+                                        <td>90.63</td>
+                                        <td>90.85</td>
+                                        <td>90.42</td>
+                                        <td>82.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>85</td>
+                                        <td>o1-preview</td>
+                                        <td>GPT4o</td>
+                                        <td>91.25</td>
+                                        <td>63.57</td>
+                                        <td>92.34</td>
+                                        <td>74.92</td>
+                                        <td>66.08</td>
+                                        <td>87.35</td>
+                                        <td>93.41</td>
+                                        <td>91.69</td>
+                                        <td>94.56</td>
+                                        <td>83.91</td>
+                                    </tr>
+                                    <tr>
+                                        <td>86</td>
+                                        <td>o1-preview</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>71.84</td>
+                                        <td>50.63</td>
+                                        <td>80.29</td>
+                                        <td>42.75</td>
+                                        <td>71.06</td>
+                                        <td>85.38</td>
+                                        <td>74.89</td>
+                                        <td>75.17</td>
+                                        <td>75.04</td>
+                                        <td>69.67</td>
+                                    </tr>
+                                    <tr>
+                                        <td>87</td>
+                                        <td>o1-preview</td>
+                                        <td>Gemma 7B</td>
+                                        <td>52.39</td>
+                                        <td>40.81</td>
+                                        <td>40.56</td>
+                                        <td>28.43</td>
+                                        <td>62.97</td>
+                                        <td>66.12</td>
+                                        <td>60.78</td>
+                                        <td>71.25</td>
+                                        <td>72.90</td>
+                                        <td>55.13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>88</td>
+                                        <td>o1-preview</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>62.73</td>
+                                        <td>34.28</td>
+                                        <td>55.64</td>
+                                        <td>34.95</td>
+                                        <td>67.81</td>
+                                        <td>55.46</td>
+                                        <td>64.37</td>
+                                        <td>70.82</td>
+                                        <td>74.15</td>
+                                        <td>57.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>89</td>
+                                        <td>o1-preview</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>62.19</td>
+                                        <td>52.47</td>
+                                        <td>55.03</td>
+                                        <td>40.68</td>
+                                        <td>73.52</td>
+                                        <td>74.89</td>
+                                        <td>83.26</td>
+                                        <td>84.73</td>
+                                        <td>88.31</td>
+                                        <td>68.34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>90</td>
+                                        <td>o1-preview</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>73.65</td>
+                                        <td>61.92</td>
+                                        <td>80.57</td>
+                                        <td>52.34</td>
+                                        <td>69.85</td>
+                                        <td>72.06</td>
+                                        <td>73.48</td>
+                                        <td>78.91</td>
+                                        <td>82.76</td>
+                                        <td>71.73</td>
+                                    </tr>
+
+                                    <!-- o3-mini Data -->
+                                    <tr>
+                                        <td>91</td>
+                                        <td>o3-mini</td>
+                                        <td>Mixtral-8x7B-Instruct-v0.1</td>
+                                        <td>91.45</td>
+                                        <td>82.17</td>
+                                        <td>74.93</td>
+                                        <td>87.62</td>
+                                        <td>37.85</td>
+                                        <td>83.04</td>
+                                        <td>90.38</td>
+                                        <td>88.71</td>
+                                        <td>85.29</td>
+                                        <td>80.16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>92</td>
+                                        <td>o3-mini</td>
+                                        <td>LLaMA3.1-8B-Instruct</td>
+                                        <td>82.36</td>
+                                        <td>57.88</td>
+                                        <td>82.59</td>
+                                        <td>73.14</td>
+                                        <td>54.27</td>
+                                        <td>85.96</td>
+                                        <td>90.73</td>
+                                        <td>90.15</td>
+                                        <td>91.42</td>
+                                        <td>78.72</td>
+                                    </tr>
+                                    <tr>
+                                        <td>93</td>
+                                        <td>o3-mini</td>
+                                        <td>LLaMA3.3-70B-Instruct</td>
+                                        <td>91.83</td>
+                                        <td>73.52</td>
+                                        <td>83.47</td>
+                                        <td>89.06</td>
+                                        <td>66.31</td>
+                                        <td>82.58</td>
+                                        <td>92.69</td>
+                                        <td>91.84</td>
+                                        <td>92.37</td>
+                                        <td>84.85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>94</td>
+                                        <td>o3-mini</td>
+                                        <td>Qwen2.5-7B-Instruct</td>
+                                        <td>82.94</td>
+                                        <td>55.67</td>
+                                        <td>91.28</td>
+                                        <td>86.45</td>
+                                        <td>73.09</td>
+                                        <td>86.74</td>
+                                        <td>91.53</td>
+                                        <td>87.62</td>
+                                        <td>88.91</td>
+                                        <td>82.69</td>
+                                    </tr>
+                                    <tr>
+                                        <td>95</td>
+                                        <td>o3-mini</td>
+                                        <td>Gemma-2-9b-it</td>
+                                        <td>82.15</td>
+                                        <td>55.39</td>
+                                        <td>91.76</td>
+                                        <td>88.83</td>
+                                        <td>63.42</td>
+                                        <td>84.95</td>
+                                        <td>92.18</td>
+                                        <td>85.67</td>
+                                        <td>86.50</td>
+                                        <td>81.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>96</td>
+                                        <td>o3-mini</td>
+                                        <td>Gemini1.5-flash</td>
+                                        <td>73.62</td>
+                                        <td>55.81</td>
+                                        <td>91.04</td>
+                                        <td>87.35</td>
+                                        <td>79.68</td>
+                                        <td>83.27</td>
+                                        <td>90.89</td>
+                                        <td>89.76</td>
+                                        <td>92.03</td>
+                                        <td>82.61</td>
+                                    </tr>
+                                    <tr>
+                                        <td>97</td>
+                                        <td>o3-mini</td>
+                                        <td>Gemini1.5-pro</td>
+                                        <td>82.73</td>
+                                        <td>73.95</td>
+                                        <td>97.12</td>
+                                        <td>90.84</td>
+                                        <td>84.57</td>
+                                        <td>87.46</td>
+                                        <td>88.31</td>
+                                        <td>89.59</td>
+                                        <td>91.24</td>
+                                        <td>87.31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>98</td>
+                                        <td>o3-mini</td>
+                                        <td>claude-3-5-sonnet-20241022</td>
+                                        <td>88.29</td>
+                                        <td>79.43</td>
+                                        <td>91.87</td>
+                                        <td>85.06</td>
+                                        <td>82.39</td>
+                                        <td>89.82</td>
+                                        <td>92.75</td>
+                                        <td>90.48</td>
+                                        <td>91.57</td>
+                                        <td>87.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>99</td>
+                                        <td>o3-mini</td>
+                                        <td>GPT3.5</td>
+                                        <td>91.68</td>
+                                        <td>66.34</td>
+                                        <td>83.58</td>
+                                        <td>79.72</td>
+                                        <td>65.18</td>
+                                        <td>82.95</td>
+                                        <td>88.41</td>
+                                        <td>90.93</td>
+                                        <td>91.06</td>
+                                        <td>82.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>o3-mini</td>
+                                        <td>GPT4o</td>
+                                        <td>91.37</td>
+                                        <td>73.26</td>
+                                        <td>91.49</td>
+                                        <td>84.91</td>
+                                        <td>76.03</td>
+                                        <td>85.64</td>
+                                        <td>91.85</td>
+                                        <td>91.72</td>
+                                        <td>94.08</td>
+                                        <td>86.71</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>o3-mini</td>
+                                        <td>GLM-4-9B-Chat</td>
+                                        <td>73.85</td>
+                                        <td>62.14</td>
+                                        <td>76.92</td>
+                                        <td>41.78</td>
+                                        <td>63.45</td>
+                                        <td>86.50</td>
+                                        <td>75.63</td>
+                                        <td>76.84</td>
+                                        <td>77.39</td>
+                                        <td>70.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>o3-mini</td>
+                                        <td>Gemma 7B</td>
+                                        <td>55.27</td>
+                                        <td>52.90</td>
+                                        <td>39.15</td>
+                                        <td>31.64</td>
+                                        <td>50.83</td>
+                                        <td>69.72</td>
+                                        <td>61.48</td>
+                                        <td>72.36</td>
+                                        <td>73.81</td>
+                                        <td>56.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>103</td>
+                                        <td>o3-mini</td>
+                                        <td>ChatGLM2-6B</td>
+                                        <td>65.43</td>
+                                        <td>43.08</td>
+                                        <td>50.76</td>
+                                        <td>35.29</td>
+                                        <td>49.57</td>
+                                        <td>58.64</td>
+                                        <td>63.92</td>
+                                        <td>72.15</td>
+                                        <td>75.34</td>
+                                        <td>57.13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>104</td>
+                                        <td>o3-mini</td>
+                                        <td>Qwen2.5-1.5B</td>
+                                        <td>66.58</td>
+                                        <td>60.47</td>
+                                        <td>51.83</td>
+                                        <td>39.26</td>
+                                        <td>70.14</td>
+                                        <td>77.89</td>
+                                        <td>80.05</td>
+                                        <td>80.72</td>
+                                        <td>85.46</td>
+                                        <td>68.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>105</td>
+                                        <td>o3-mini</td>
+                                        <td>Phi-3-mini 3.8B</td>
+                                        <td>76.19</td>
+                                        <td>72.53</td>
+                                        <td>78.64</td>
+                                        <td>55.07</td>
+                                        <td>59.86</td>
+                                        <td>70.21</td>
+                                        <td>75.38</td>
+                                        <td>80.95</td>
+                                        <td>83.27</td>
+                                        <td>72.46</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+    <!--BibTeX citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>BibTex Code Here</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
 
-  </body>
-  </html>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            You are free to borrow the source code of this website, we just ask that you link back to
+                            this page in the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cells = Array.from(
+                document.querySelectorAll('.leaderboard-module table tbody tr td:nth-child(n+4)')
+            );
+
+            const COLOR_LOW = [255, 199, 206];
+            const COLOR_MID = [255, 235, 156];
+            const COLOR_HIGH = [198, 239, 206];
+
+            cells.forEach(td => {
+                const v = parseFloat(td.textContent) || 0;
+                const t = Math.max(0, Math.min(1, v / 100));
+                let r, g, b;
+
+                if (t <= 0.5) {
+                    const tt = t / 0.5;
+                    r = COLOR_LOW[0] + (COLOR_MID[0] - COLOR_LOW[0]) * tt;
+                    g = COLOR_LOW[1] + (COLOR_MID[1] - COLOR_LOW[1]) * tt;
+                    b = COLOR_LOW[2] + (COLOR_MID[2] - COLOR_LOW[2]) * tt;
+                } else {
+                    const tt = (t - 0.5) / 0.5;
+                    r = COLOR_MID[0] + (COLOR_HIGH[0] - COLOR_MID[0]) * tt;
+                    g = COLOR_MID[1] + (COLOR_HIGH[1] - COLOR_MID[1]) * tt;
+                    b = COLOR_MID[2] + (COLOR_HIGH[2] - COLOR_MID[2]) * tt;
+                }
+
+                r = Math.round(r); g = Math.round(g); b = Math.round(b);
+                td.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+                const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                td.style.color = brightness < 128 ? '#fff' : '#000';
+
+                td.style.transition = 'background-color 0.3s ease';
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cells = Array.from(
+                document.querySelectorAll('.leaderboard-module table tbody tr td:nth-child(n+4)')
+            );
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('.leaderboard-module table');
+            const tbody = table.tBodies[0];
+
+            const sortableThs = Array.from(
+                table.querySelectorAll('thead tr:nth-child(2) th.dataset-column.sortable')
+            );
+
+            function clearMedals() {
+                tbody.querySelectorAll('tr td').forEach(td => {
+                    td.textContent = td.textContent.replace(/^(?:🥇|🥈|🥉)\s*/gu, '');
+                });
+            }
+
+            function addMedalIconsOnColumn(cellIndex, order) {
+                clearMedals();
+                const rows = Array.from(tbody.rows);
+                const medals = ['🥇', '🥈', '🥉'];
+                const targets = order === 'asc'
+                    ? [rows.length - 3, rows.length - 2, rows.length - 1]
+                    : [0, 1, 2];
+                targets.forEach((r, i) => {
+                    const cell = rows[r].cells[cellIndex];
+                    cell.textContent = `${medals[i]} ${cell.textContent}`;
+                });
+            }
+
+            sortableThs.forEach((th, idx) => {
+                th.addEventListener('click', () => {
+                    setTimeout(() => {
+                        const cellIndex = idx + 3;
+                        const sortAttr = th.getAttribute('aria-sort') || '';
+                        const order = sortAttr.toLowerCase().includes('asc') ? 'asc' : 'desc';
+                        addMedalIconsOnColumn(cellIndex, order);
+                    }, 100);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
